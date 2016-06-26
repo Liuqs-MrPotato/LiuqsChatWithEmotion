@@ -1,0 +1,62 @@
+//
+//  LiuqsPrefixHeader.pch
+//  chatWithEmotion
+//
+//  Created by 刘全水 on 16/2/16.
+//  Copyright © 2016年 刘全水. All rights reserved.
+//
+
+#ifndef LiuqsPrefixHeader_pch
+#define LiuqsPrefixHeader_pch
+
+//屏幕尺寸
+#define screenH [UIScreen mainScreen].bounds.size.height
+#define screenW [UIScreen mainScreen].bounds.size.width
+
+//头文件
+#import "EmotionCodeTable.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#import "UIImageView+PlayGIF.h"
+#import "LiuqsChangeStrTool.h"
+#import "LiuqsEmotionView.h"
+
+
+//颜色
+#define bgColor [UIColor colorWithRed:235.0/255 green:235.0/255 blue:235.0/255 alpha:1.0]
+#define pinkColor [UIColor colorWithRed:255.0/255 green:114.0/255 blue:180.0/255 alpha:1.0]
+#define BACKGROUND_COLOR [UIColor colorWithRed:239/255.0 green:239/255.0 blue:244/255.0 alpha:1]
+#define COLOR_LINE [UIColor lightGrayColor]
+#define emotionBtnsBGColor [UIColor colorWithRed:195.0/255 green:195.0/255 blue:195.0/255 alpha:1.0]
+#endif
+
+
+///emotionView
+#define EMOJI_KEYBOARD_HEIGHT (4 * screenW * 0.0875 +(3 + 1) * ((screenW - 7 * screenW * 0.0875 ) / 8) + 20)
+
+#define emotionUpFrame CGRectMake(0, screenH - (EMOJI_KEYBOARD_HEIGHT), screenW, EMOJI_KEYBOARD_HEIGHT)
+
+#define emotionDownFrame CGRectMake(0, screenH, screenW, 0)
+
+#define emotionTipTime 0.25
+
+
+///toolbar
+#define toobarH screenW * 44 / 320
+#define TextViewW screenW - (screenW * 55 / 320)
+#define TextViewH screenW * 34 / 320
+#define emotionBtnW screenW * 34 / 320
+#define emotionBtnH screenW * 34 / 320
+#define emotionBtnX screenW -(screenW * 40 / 320)
+#define toolBarFrameDown CGRectMake(0, screenH - toobarH, screenW, toobarH)
+#define toolBarFrameUPBaseEmotion CGRectMake(0, screenH - toobarH - EMOJI_KEYBOARD_HEIGHT, screenW, toobarH)
+
+
+
+
+
+
+
+
+
+
