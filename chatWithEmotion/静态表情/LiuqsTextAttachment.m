@@ -1,17 +1,18 @@
 //
-//  EmojiTextAttachment.m
-//  InputEmojiExample
+//  LiuqsTextAttachment.m
+//  chatWithEmotion
 //
-//  Created by zorro on 15/3/7.
-//  Copyright (c) 2015年 tutuge. All rights reserved.
+//  Created by 刘全水 on 16/7/25.
+//  Copyright © 2016年 刘全水. All rights reserved.
 //
 
-#import "EmojiTextAttachment.h"
+#import "LiuqsTextAttachment.h"
 
-@implementation EmojiTextAttachment
+@implementation LiuqsTextAttachment
 
 - (CGRect)attachmentBoundsForTextContainer:(NSTextContainer *)textContainer proposedLineFragment:(CGRect)lineFrag glyphPosition:(CGPoint)position characterIndex:(NSUInteger)charIndex {
     
     return CGRectMake(0, -3, _emojiSize.width, _emojiSize.height);
 }
+
 @end

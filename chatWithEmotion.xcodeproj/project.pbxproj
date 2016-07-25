@@ -24,9 +24,9 @@
 		73D9D5021D45A5B300E61924 /* LiuqsGifEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */; };
 		73D9D5041D45A5B800E61924 /* LiuqsEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */; };
 		73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D9D5061D45A65200E61924 /* UIImage+Extension.m */; };
+		73D9D50A1D45B09200E61924 /* LiuqsTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D9D5091D45B09200E61924 /* LiuqsTextAttachment.m */; };
 		73E91F211C8543980049D49A /* LiuqsEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F201C8543980049D49A /* LiuqsEmotionView.m */; };
 		73E91F261C8544680049D49A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F251C8544680049D49A /* UIView+Extension.m */; };
-		73E91F2B1C85448B0049D49A /* EmojiTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F281C85448B0049D49A /* EmojiTextAttachment.m */; };
 		73E91F2C1C85448B0049D49A /* NSAttributedString+EmojiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F2A1C85448B0049D49A /* NSAttributedString+EmojiExtension.m */; };
 		73E91F2F1C8544B90049D49A /* UIImageView+PlayGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F2E1C8544B90049D49A /* UIImageView+PlayGIF.m */; };
 		73E91F331C854C8E0049D49A /* LiuqsToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F321C854C8E0049D49A /* LiuqsToolbarView.m */; };
@@ -180,12 +180,12 @@
 		73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmoji.plist; sourceTree = "<group>"; };
 		73D9D5051D45A65200E61924 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		73D9D5061D45A65200E61924 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		73D9D5081D45B09200E61924 /* LiuqsTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiuqsTextAttachment.h; path = "静态表情/LiuqsTextAttachment.h"; sourceTree = "<group>"; };
+		73D9D5091D45B09200E61924 /* LiuqsTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiuqsTextAttachment.m; path = "静态表情/LiuqsTextAttachment.m"; sourceTree = "<group>"; };
 		73E91F1F1C8543980049D49A /* LiuqsEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsEmotionView.h; sourceTree = "<group>"; };
 		73E91F201C8543980049D49A /* LiuqsEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsEmotionView.m; sourceTree = "<group>"; };
 		73E91F241C8544680049D49A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		73E91F251C8544680049D49A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		73E91F271C85448B0049D49A /* EmojiTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiTextAttachment.h; sourceTree = "<group>"; };
-		73E91F281C85448B0049D49A /* EmojiTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiTextAttachment.m; sourceTree = "<group>"; };
 		73E91F291C85448B0049D49A /* NSAttributedString+EmojiExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+EmojiExtension.h"; sourceTree = "<group>"; };
 		73E91F2A1C85448B0049D49A /* NSAttributedString+EmojiExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+EmojiExtension.m"; sourceTree = "<group>"; };
 		73E91F2D1C8544B90049D49A /* UIImageView+PlayGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PlayGIF.h"; sourceTree = "<group>"; };
@@ -459,8 +459,8 @@
 				73E91F341C8572C90049D49A /* 静态表情 */,
 				73E91F1F1C8543980049D49A /* LiuqsEmotionView.h */,
 				73E91F201C8543980049D49A /* LiuqsEmotionView.m */,
-				73E91F271C85448B0049D49A /* EmojiTextAttachment.h */,
-				73E91F281C85448B0049D49A /* EmojiTextAttachment.m */,
+				73D9D5081D45B09200E61924 /* LiuqsTextAttachment.h */,
+				73D9D5091D45B09200E61924 /* LiuqsTextAttachment.m */,
 				73E91F291C85448B0049D49A /* NSAttributedString+EmojiExtension.h */,
 				73E91F2A1C85448B0049D49A /* NSAttributedString+EmojiExtension.m */,
 				73A9E0001C731C00006BE9A5 /* LiuqsChangeStrTool.h */,
@@ -846,8 +846,8 @@
 				73A9DFE71C72F7A1006BE9A5 /* LiuqsTabarController.m in Sources */,
 				73E91F261C8544680049D49A /* UIView+Extension.m in Sources */,
 				73E91F331C854C8E0049D49A /* LiuqsToolbarView.m in Sources */,
-				73E91F2B1C85448B0049D49A /* EmojiTextAttachment.m in Sources */,
 				73A9DFB51C72E3C6006BE9A5 /* AppDelegate.m in Sources */,
+				73D9D50A1D45B09200E61924 /* LiuqsTextAttachment.m in Sources */,
 				73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */,
 				73A9DFB21C72E3C6006BE9A5 /* main.m in Sources */,
 				73A9DFF11C72FEDC006BE9A5 /* LiuqsMeViewController.m in Sources */,

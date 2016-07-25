@@ -11,8 +11,6 @@
 
 @interface LiuqsChangeStrTool : NSObject
 
-+(NSMutableAttributedString *)changeStrWithStr:(NSString *)string andFont:(UIFont *)font;
-
-@property(strong,nonatomic)UIFont *font;
++ (NSMutableAttributedString *)changeStrWithStr:(NSString *)string Font:(UIFont *)font TextColor:(UIColor *)textColor;
 
 @end

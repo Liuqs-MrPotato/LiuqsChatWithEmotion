@@ -8,94 +8,118 @@
 
 #import "LiuqsChangeStrTool.h"
 
-static NSDictionary *_emojiImages;
+#define checkStr @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]"
 
+static CGSize                    _emotionSize;
+static UIFont                    *_font;
+static UIColor                   *_textColor;
+static NSArray                   *_matches;
+static NSString                  *_string;
+static NSDictionary              *_emojiImages;
+static NSMutableArray            *_imageDataArray;
+static NSMutableAttributedString *_attStr;
+static NSMutableAttributedString *_resultStr;
 
 @implementation LiuqsChangeStrTool
 
-+(NSMutableAttributedString *)changeStrWithStr:(NSString *)string andFont:(UIFont *)font
-{
++ (NSMutableAttributedString *)changeStrWithStr:(NSString *)string Font:(UIFont *)font TextColor:(UIColor *)textColor {
     
+    _font      = font;
+    _string    = string;
+    _textColor = textColor;
+    [self initProperty];
+    [self executeMatch];
+    [self setImageDataArray];
+    [self setResultStrUseReplace];
+    return _resultStr;
+}
+
++ (void)initProperty {
+    
+    // 读取并加载对照表
     NSString *path = [[NSBundle mainBundle] pathForResource:@"LiuqsEmoji" ofType:@"plist"];
+
     _emojiImages = [NSDictionary dictionaryWithContentsOfFile:path];
-    //设置行间距
+    
+    //设置文本参数
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
-    [paragraphStyle setLineSpacing:1.0];
-    //计算表情高度
-    NSDictionary *dict = @{NSFontAttributeName:font,NSParagraphStyleAttributeName:paragraphStyle};
     
-    //根据字体获取文字高度，用来设置表情的大小
+    [paragraphStyle setLineSpacing:4.0f];
+    
+    NSDictionary *dict = @{NSFontAttributeName:_font,NSParagraphStyleAttributeName:paragraphStyle};
+    
     CGSize maxsize = CGSizeMake(1000, MAXFLOAT);
-    CGSize size = [@"/" boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
-    //正则验证
-    NSString *regexString = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
-    //最终要返回的富文本
-    NSMutableAttributedString * attStr = [[NSMutableAttributedString alloc]initWithString:string attributes:dict];
     
-    //根据正则匹对字符串中的表情（编码）和位置
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:nil];
+    _emotionSize = [@"/" boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
     
-    NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
-    
-    //用来存放表情图片
-    NSMutableArray *imageDataArray = [NSMutableArray array];
-    
-    // 用下面的办法来遍历每一条匹配记录
-    for (int i = (int)matches.count - 1; i >= 0; i --) {
-        
-        //用来记录表情对应的位置
-        NSMutableDictionary *record = [NSMutableDictionary dictionary];
-        
-        //创建附件
-        NSTextAttachment *attachMent = [[NSTextAttachment alloc]init];
-        //设置附件的大小
-        attachMent.bounds = CGRectMake(0, -4, size.height, size.height);
-        
-        NSTextCheckingResult *match = [matches objectAtIndex:i];
-        
-        NSRange matchRange = [match range];
-        
-        NSString *tagString = [string substringWithRange:matchRange];
-        
-        NSString *imageName = [_emojiImages objectForKey:tagString];
-        
-        UIImage *image = [UIImage imageNamed:imageName];
-        
-        if (image == nil) {
-           //图片不存在，不做操作
-            
-        }else
-        {
-            //图片存在就记录表情的位置
-            attachMent.image = image;
-            NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attachMent];
-            
-            [record setObject:[NSValue valueWithRange:matchRange] forKey:@"range"];
-            
-            [record setObject:imageStr forKey:@"image"];
-            
-            [imageDataArray addObject:record];
-        }
-    }
-        
-        for (int i = 0; i < imageDataArray.count ; i ++) {
-            
-            //根据记录的位置换图
-    
-            NSRange range = [imageDataArray[i][@"range"] rangeValue];
-            
-            NSDictionary *imageDic = [imageDataArray objectAtIndex:i];
-            
-            NSMutableAttributedString *imageStr = [imageDic objectForKey:@"image"];
-            
-            [attStr replaceCharactersInRange:range withAttributedString:imageStr];
-        
-        }
-    
-    return attStr;
+    _attStr = [[NSMutableAttributedString alloc]initWithString:_string];
 }
 
 
-
++ (void)executeMatch {
     
+    //比对结果
+    NSString *regexString = checkStr;
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:nil];
+    
+    NSRange totalRange = NSMakeRange(0, [_string length]);
+    
+    _matches = [regex matchesInString:_string options:0 range:totalRange];
+}
+
++ (void)setImageDataArray {
+    
+    NSMutableArray *imageDataArray = [NSMutableArray array];
+    //遍历结果
+    for (int i = (int)_matches.count - 1; i >= 0; i --) {
+        
+        NSMutableDictionary *record = [NSMutableDictionary dictionary];
+        
+        LiuqsTextAttachment *attachMent = [[LiuqsTextAttachment alloc]init];
+        
+        attachMent.emojiSize = CGSizeMake(_emotionSize.height, _emotionSize.height);
+        
+        NSTextCheckingResult *match = [_matches objectAtIndex:i];
+        
+        NSRange matchRange = [match range];
+        
+        NSString *tagString = [_string substringWithRange:matchRange];
+        
+        NSString *imageName = [_emojiImages objectForKey:tagString];
+        
+        if (imageName == nil || imageName.length == 0) break;
+        
+        UIImage *image = [UIImage imageNamed:imageName];
+        
+        attachMent.image = image;
+        
+        NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attachMent];
+        
+        [record setObject:[NSValue valueWithRange:matchRange] forKey:@"range"];
+        
+        [record setObject:imageStr forKey:@"image"];
+        
+        [imageDataArray addObject:record];
+    }
+    _imageDataArray = imageDataArray;
+}
+
++ (void)setResultStrUseReplace{
+    
+    NSMutableAttributedString *result = _attStr;
+    
+    for (int i = 0; i < _imageDataArray.count ; i ++) {
+        
+        NSRange range = [_imageDataArray[i][@"range"] rangeValue];
+        
+        NSDictionary *imageDic = [_imageDataArray objectAtIndex:i];
+        
+        NSMutableAttributedString *imageStr = [imageDic objectForKey:@"image"];
+        
+        [result replaceCharactersInRange:range withAttributedString:imageStr];
+    }
+    _resultStr = result;
+}
+
 @end
