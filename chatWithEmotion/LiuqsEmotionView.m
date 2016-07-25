@@ -7,7 +7,10 @@
 
 #import "LiuqsEmotionView.h"
 #import "UIView+Extension.h"
-#import "EmotionCodeTable.h"
+
+static NSDictionary *_emotionGifTitle;
+static NSArray      *_emojiTags;
+static NSDictionary *_emojiStaticImages;
 
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define screenH [UIScreen mainScreen].bounds.size.height
@@ -59,21 +62,44 @@
     
     if (self) {
         
-        self.userInteractionEnabled = YES;
+        [self initEmojiDatas];
+        
     }
     return self;
+}
+
+- (void)initEmojiDatas {
+
+    self.userInteractionEnabled = YES;
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"LiuqsEmoji" ofType:@"plist"];
+    
+    _emojiStaticImages = [NSDictionary dictionaryWithContentsOfFile:path];
+
+    _emojiTags = [_emojiStaticImages allKeys];
+    
+    NSString *gifPath = [[NSBundle mainBundle] pathForResource:@"LiuqsGifEmoji" ofType:@"plist"];
+    
+    _emotionGifTitle = [NSDictionary dictionaryWithContentsOfFile:gifPath];
 }
 
 //创建btnsBar
 -(void)creatBtnsBar
 {
     UIButton *btnsBar = [[UIButton alloc]initWithFrame:CGRectMake(0, self.emotonViewPageOne.frame.size.height + 15, screenW, emotionW + 5)];
+    
     self.btnsBar = btnsBar;
+    
     btnsBar.userInteractionEnabled = YES;
+    
     UIScrollView *btnsScrollView = [[UIScrollView alloc]init];
+    
     btnsBar.backgroundColor = [UIColor whiteColor];
+    
     [btnsBar addSubview:btnsScrollView];
+    
     btnsBar.userInteractionEnabled = YES;
+    
     [self addSubview:btnsBar];
     
     btnsBar.backgroundColor = BACKGROUND_COLOR;
@@ -97,10 +123,15 @@
     [sendBtn setBackgroundImage:[UIImage createImageWithColor:[UIColor colorWithRed:37.0 / 255.0 green:139.0 / 255.0 blue:277.0 / 255.0 alpha:1.0f]] forState:UIControlStateSelected];
     
     self.sendBtn = sendBtn;
+    
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 1, sendBtn.frame.size.height)];
+    
     lineView.backgroundColor = COLOR_LINE;
+    
     [sendBtn addSubview:lineView];
+    
     [btnsBar addSubview:sendBtn];
+    
     [self creatScrollBtnsView];
 
 }
@@ -394,7 +425,7 @@
     EmojiTextAttachment *emojiTextAttachment = [EmojiTextAttachment new];
     emojiTextAttachment.emojiTag = _emojiTags[(NSUInteger) btn.tag - 1];
     
-    NSString *imageName = [_emojiImages objectForKey:_emojiTags[(NSUInteger) btn.tag - 1]];
+    NSString *imageName = [_emojiStaticImages objectForKey:_emojiTags[(NSUInteger) btn.tag - 1]];
     
     emojiTextAttachment.image = [UIImage imageNamed:imageName];
     

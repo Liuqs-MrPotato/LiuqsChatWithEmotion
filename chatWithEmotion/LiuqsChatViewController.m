@@ -52,7 +52,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     LiuqsChtaDetailViewController *chatVC = [[LiuqsChtaDetailViewController alloc]init];
     [self.navigationController pushViewController:chatVC animated:YES];
+    
 }
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

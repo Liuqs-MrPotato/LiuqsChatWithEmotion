@@ -7,13 +7,17 @@
 //
 
 #import "LiuqsChangeStrTool.h"
-#import "EmotionCodeTable.h"
+
+static NSDictionary *_emojiImages;
 
 
 @implementation LiuqsChangeStrTool
 
 +(NSMutableAttributedString *)changeStrWithStr:(NSString *)string andFont:(UIFont *)font
 {
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"LiuqsEmoji" ofType:@"plist"];
+    _emojiImages = [NSDictionary dictionaryWithContentsOfFile:path];
     //设置行间距
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
     [paragraphStyle setLineSpacing:1.0];

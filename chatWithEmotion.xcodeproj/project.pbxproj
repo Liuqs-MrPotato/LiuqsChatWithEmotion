@@ -21,7 +21,9 @@
 		73A9DFF11C72FEDC006BE9A5 /* LiuqsMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A9DFF01C72FEDC006BE9A5 /* LiuqsMeViewController.m */; };
 		73A9E0021C731C00006BE9A5 /* LiuqsChangeStrTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A9E0011C731C00006BE9A5 /* LiuqsChangeStrTool.m */; };
 		73A9E00A1C732677006BE9A5 /* LiuqsChtaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A9E0091C732677006BE9A5 /* LiuqsChtaDetailViewController.m */; };
-		73E91F1A1C8538EB0049D49A /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F191C8538EB0049D49A /* UIImage+Extension.m */; };
+		73D9D5021D45A5B300E61924 /* LiuqsGifEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */; };
+		73D9D5041D45A5B800E61924 /* LiuqsEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */; };
+		73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D9D5061D45A65200E61924 /* UIImage+Extension.m */; };
 		73E91F211C8543980049D49A /* LiuqsEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F201C8543980049D49A /* LiuqsEmotionView.m */; };
 		73E91F261C8544680049D49A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F251C8544680049D49A /* UIView+Extension.m */; };
 		73E91F2B1C85448B0049D49A /* EmojiTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F281C85448B0049D49A /* EmojiTextAttachment.m */; };
@@ -169,14 +171,15 @@
 		73A9DFED1C72F9F4006BE9A5 /* LiuqsChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsChatViewController.m; sourceTree = "<group>"; };
 		73A9DFEF1C72FEDC006BE9A5 /* LiuqsMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsMeViewController.h; sourceTree = "<group>"; };
 		73A9DFF01C72FEDC006BE9A5 /* LiuqsMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsMeViewController.m; sourceTree = "<group>"; };
-		73A9DFFF1C731C00006BE9A5 /* EmotionCodeTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionCodeTable.h; sourceTree = "<group>"; };
 		73A9E0001C731C00006BE9A5 /* LiuqsChangeStrTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChangeStrTool.h; sourceTree = "<group>"; };
 		73A9E0011C731C00006BE9A5 /* LiuqsChangeStrTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsChangeStrTool.m; sourceTree = "<group>"; };
 		73A9E0061C73206B006BE9A5 /* LiuqsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiuqsPrefixHeader.pch; sourceTree = "<group>"; };
 		73A9E0081C732677006BE9A5 /* LiuqsChtaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChtaDetailViewController.h; sourceTree = "<group>"; };
 		73A9E0091C732677006BE9A5 /* LiuqsChtaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsChtaDetailViewController.m; sourceTree = "<group>"; };
-		73E91F181C8538EB0049D49A /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
-		73E91F191C8538EB0049D49A /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsGifEmoji.plist; sourceTree = "<group>"; };
+		73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmoji.plist; sourceTree = "<group>"; };
+		73D9D5051D45A65200E61924 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		73D9D5061D45A65200E61924 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		73E91F1F1C8543980049D49A /* LiuqsEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsEmotionView.h; sourceTree = "<group>"; };
 		73E91F201C8543980049D49A /* LiuqsEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsEmotionView.m; sourceTree = "<group>"; };
 		73E91F241C8544680049D49A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -354,7 +357,7 @@
 		73A9DFAF1C72E3C6006BE9A5 /* chatWithEmotion */ = {
 			isa = PBXGroup;
 			children = (
-				73A9DFF91C731927006BE9A5 /* LqsEmotionView */,
+				73A9DFF91C731927006BE9A5 /* LiuqsEmotionView */,
 				73A9DFF21C72FEE4006BE9A5 /* 个人中心 */,
 				73A9DFEB1C72F9D2006BE9A5 /* 聊天 */,
 				73A9DFE41C72F75E006BE9A5 /* main */,
@@ -448,10 +451,10 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		73A9DFF91C731927006BE9A5 /* LqsEmotionView */ = {
+		73A9DFF91C731927006BE9A5 /* LiuqsEmotionView */ = {
 			isa = PBXGroup;
 			children = (
-				73E91F231C8543F60049D49A /* 分类 */,
+				73E91F231C8543F60049D49A /* categorys */,
 				73E91FCF1C85756B0049D49A /* gif超清 */,
 				73E91F341C8572C90049D49A /* 静态表情 */,
 				73E91F1F1C8543980049D49A /* LiuqsEmotionView.h */,
@@ -460,13 +463,14 @@
 				73E91F281C85448B0049D49A /* EmojiTextAttachment.m */,
 				73E91F291C85448B0049D49A /* NSAttributedString+EmojiExtension.h */,
 				73E91F2A1C85448B0049D49A /* NSAttributedString+EmojiExtension.m */,
-				73A9DFFF1C731C00006BE9A5 /* EmotionCodeTable.h */,
 				73A9E0001C731C00006BE9A5 /* LiuqsChangeStrTool.h */,
 				73A9E0011C731C00006BE9A5 /* LiuqsChangeStrTool.m */,
 				73E91F311C854C8E0049D49A /* LiuqsToolbarView.h */,
 				73E91F321C854C8E0049D49A /* LiuqsToolbarView.m */,
+				73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */,
+				73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */,
 			);
-			name = LqsEmotionView;
+			name = LiuqsEmotionView;
 			sourceTree = "<group>";
 		};
 		73A9E0071C732643006BE9A5 /* controllers */ = {
@@ -480,17 +484,17 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
-		73E91F231C8543F60049D49A /* 分类 */ = {
+		73E91F231C8543F60049D49A /* categorys */ = {
 			isa = PBXGroup;
 			children = (
 				73E91F2D1C8544B90049D49A /* UIImageView+PlayGIF.h */,
 				73E91F2E1C8544B90049D49A /* UIImageView+PlayGIF.m */,
 				73E91F241C8544680049D49A /* UIView+Extension.h */,
 				73E91F251C8544680049D49A /* UIView+Extension.m */,
-				73E91F181C8538EB0049D49A /* UIImage+Extension.h */,
-				73E91F191C8538EB0049D49A /* UIImage+Extension.m */,
+				73D9D5051D45A65200E61924 /* UIImage+Extension.h */,
+				73D9D5061D45A65200E61924 /* UIImage+Extension.m */,
 			);
-			name = "分类";
+			name = categorys;
 			sourceTree = "<group>";
 		};
 		73E91F341C8572C90049D49A /* 静态表情 */ = {
@@ -669,6 +673,8 @@
 				TargetAttributes = {
 					73A9DFAC1C72E3C6006BE9A5 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5HV87G6KG6;
+						DevelopmentTeamName = "Ke Xu";
 					};
 					73A9DFC51C72E3C6006BE9A5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -743,6 +749,7 @@
 				73E91FA81C8572C90049D49A /* [45].png in Resources */,
 				73E91FBB1C8572C90049D49A /* [62].png in Resources */,
 				73E91FAD1C8572C90049D49A /* [4].png in Resources */,
+				73D9D5041D45A5B800E61924 /* LiuqsEmoji.plist in Resources */,
 				73E91FE61C85756B0049D49A /* 2_5.gif in Resources */,
 				73E91F8D1C8572C90049D49A /* [20].png in Resources */,
 				73E91FBE1C8572C90049D49A /* [65].png in Resources */,
@@ -757,6 +764,7 @@
 				73E91F9C1C8572C90049D49A /* [34].png in Resources */,
 				73E91F9E1C8572C90049D49A /* [36].png in Resources */,
 				73E91FCA1C8572C90049D49A /* [76].png in Resources */,
+				73D9D5021D45A5B300E61924 /* LiuqsGifEmoji.plist in Resources */,
 				73E91F8C1C8572C90049D49A /* [1].png in Resources */,
 				73E91FCB1C8572C90049D49A /* [77].png in Resources */,
 				73E91FBD1C8572C90049D49A /* [64].png in Resources */,
@@ -840,8 +848,8 @@
 				73E91F331C854C8E0049D49A /* LiuqsToolbarView.m in Sources */,
 				73E91F2B1C85448B0049D49A /* EmojiTextAttachment.m in Sources */,
 				73A9DFB51C72E3C6006BE9A5 /* AppDelegate.m in Sources */,
+				73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */,
 				73A9DFB21C72E3C6006BE9A5 /* main.m in Sources */,
-				73E91F1A1C8538EB0049D49A /* UIImage+Extension.m in Sources */,
 				73A9DFF11C72FEDC006BE9A5 /* LiuqsMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -964,9 +972,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/Liuqs/Downloads/chatWithEmotion/chatWithEmotion/LiuqsPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/Liuqs/Desktop/LiuqsChatWithEmotion/chatWithEmotion/LiuqsPrefixHeader.pch;
 				INFOPLIST_FILE = chatWithEmotion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quanshui.cn.chatWithEmotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -978,9 +986,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/Liuqs/Downloads/chatWithEmotion/chatWithEmotion/LiuqsPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/Liuqs/Desktop/LiuqsChatWithEmotion/chatWithEmotion/LiuqsPrefixHeader.pch;
 				INFOPLIST_FILE = chatWithEmotion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quanshui.cn.chatWithEmotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
