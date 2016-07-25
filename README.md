@@ -24,7 +24,11 @@ cell上展示的效果：
 
 请修改pch文件地址，具体操作看下图：
 
+Build Setting 下，搜索 prefix
+
 ![image](https://github.com/LMMIsGood/LiuqsChatWithEmotion/blob/master/ExampleImages/error2.png)
+
+拖拽项目other目录下的pch文件修改其关联地址
 
 ![image](https://github.com/LMMIsGood/LiuqsChatWithEmotion/blob/master/ExampleImages/error3.png)
 
