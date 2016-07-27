@@ -12,10 +12,15 @@
 
 @implementation LiuqsChatViewCell
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView
-{
++ (instancetype)cellWithTableView:(UITableView *)tableView {
+    
     static NSString *ID = @"LiuqsChatCell";
-    LiuqsChatViewCell *cell = [[LiuqsChatViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
+    
+    LiuqsChatViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        
+       cell = [[LiuqsChatViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
+    }
     return cell;
 }
 

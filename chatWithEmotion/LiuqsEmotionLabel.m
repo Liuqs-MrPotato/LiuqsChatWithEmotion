@@ -16,28 +16,26 @@
 - (void)setAttributedText:(NSAttributedString *)attributedText {
     
     [super setAttributedText:attributedText];
-    
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"11111");
+
         if (obj){ [obj removeFromSuperview];}
     }];
     
     [self.attributedText enumerateAttribute:NSAttachmentAttributeName inRange:NSMakeRange(0, self.attributedText.length) options:0 usingBlock:^(LiuqsTextAttachment *value, NSRange range, BOOL * _Nonnull stop) {
         
         if (value) {
-        
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-               
+            
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            
                 NSString *imageName = [NSString stringWithFormat:@"%@.png",value.imageName];
                 
                 UIImageView *emojiView = [self imageViewWithImageName:imageName frame:value.emotionRect];
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
-                   
+                    
                     [self addSubview:emojiView];
-                });
+//                });
             });
-           
         }
     }];
 }

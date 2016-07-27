@@ -92,6 +92,8 @@ static NSMutableAttributedString *_resultStr;
         
         attachMent.imageName = imageName;
         
+        attachMent.image = [UIImage imageNamed:imageName];
+        
         NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attachMent];
         
         [record setObject:[NSValue valueWithRange:matchRange] forKey:@"range"];

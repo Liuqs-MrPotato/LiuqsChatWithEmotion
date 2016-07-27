@@ -12,4 +12,6 @@
 
 @property(nonatomic, copy)NSMutableAttributedString *attriText;
 
+@property(nonatomic, assign)BOOL isFirst;
+
 @end
