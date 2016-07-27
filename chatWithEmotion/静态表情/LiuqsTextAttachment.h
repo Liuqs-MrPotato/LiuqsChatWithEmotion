@@ -8,10 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    //gif
+    LiuqsEmotionTypeGif,
+    //静态图
+    LiuqsEmotionTypePng,
+    
+} LiuqsEmotionType;
+
 @interface LiuqsTextAttachment : NSTextAttachment
 
-@property(strong, nonatomic) NSString *emojiTag;
+@property(nonatomic, copy)   NSString *imageName;
 
-@property(assign, nonatomic) CGSize   emojiSize;
+@property(nonatomic, strong) NSString *emojiTag;
+
+@property(nonatomic, assign) CGSize   emojiSize;
+
+@property(nonatomic, assign) CGRect   emotionRect;
+
+@property(nonatomic, assign) LiuqsEmotionType emotionType;
 
 @end

@@ -16,7 +16,7 @@
 
 @property(copy,nonatomic)NSString *gifName;
 
-@property(nonatomic, copy)NSAttributedString *attributedText;
+@property(nonatomic, copy)NSMutableAttributedString *attributedText;
 
 
 @end

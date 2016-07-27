@@ -106,14 +106,21 @@ static NSDictionary *_emojiStaticImages;
 
 - (void)initEmojiDatas {
     
-    self.sendBtn.enabled = NO;
+    self.sendBtn.enabled        = NO;
     self.userInteractionEnabled = YES;
     self.gap = (screenW - rowCount * emotionW) / (rowCount + 1);
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"LiuqsEmoji" ofType:@"plist"];
-    _emojiStaticImages = [NSDictionary dictionaryWithContentsOfFile:path];
-    _emojiTags = [_emojiStaticImages allKeys];
-    NSString *gifPath = [[NSBundle mainBundle] pathForResource:@"LiuqsGifEmoji" ofType:@"plist"];
-    _emotionGifTitle = [NSDictionary dictionaryWithContentsOfFile:gifPath];
+    
+    NSString *staPath  = [[NSBundle mainBundle] pathForResource:@"LiuqsEmoji" ofType:@"plist"];
+    
+    NSString *gifPath  = [[NSBundle mainBundle] pathForResource:@"LiuqsGifEmoji" ofType:@"plist"];
+    
+    NSString *tagPath  = [[NSBundle mainBundle] pathForResource:@"LiuqsEmotionTags" ofType:@"plist"];
+    
+    _emojiTags         = [NSArray      arrayWithContentsOfFile:tagPath];
+    
+    _emotionGifTitle   = [NSDictionary dictionaryWithContentsOfFile:gifPath];
+    
+    _emojiStaticImages = [NSDictionary dictionaryWithContentsOfFile:staPath];
 }
 
 //创建btnsBar

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7300734D1D4768F1005CE987 /* LiuqsEmotionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300734C1D4768F1005CE987 /* LiuqsEmotionLabel.m */; };
+		7300734F1D476C61005CE987 /* 014@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7300734E1D476C61005CE987 /* 014@2x.gif */; };
 		736300F21C8693FE007236DA /* LiuqsChatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F11C8693FE007236DA /* LiuqsChatViewCell.m */; };
 		736300F51C869428007236DA /* LiuqsChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F41C869428007236DA /* LiuqsChatMessage.m */; };
 		736300F81C8694B1007236DA /* LiuqsCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F71C8694B1007236DA /* LiuqsCellFrame.m */; };
@@ -21,6 +23,9 @@
 		73A9DFF11C72FEDC006BE9A5 /* LiuqsMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A9DFF01C72FEDC006BE9A5 /* LiuqsMeViewController.m */; };
 		73A9E0021C731C00006BE9A5 /* LiuqsChangeStrTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A9E0011C731C00006BE9A5 /* LiuqsChangeStrTool.m */; };
 		73A9E00A1C732677006BE9A5 /* LiuqsChtaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A9E0091C732677006BE9A5 /* LiuqsChtaDetailViewController.m */; };
+		73D3740F1D4840B9008A1AB2 /* LiuqsEmotionTags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D3740E1D4840B9008A1AB2 /* LiuqsEmotionTags.plist */; };
+		73D3741C1D4853E2008A1AB2 /* UIImageView+PlayGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D374191D4853E2008A1AB2 /* UIImageView+PlayGIF.m */; };
+		73D374201D4855A7008A1AB2 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D3741F1D4855A7008A1AB2 /* UIImage+GIF.m */; };
 		73D9D5021D45A5B300E61924 /* LiuqsGifEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */; };
 		73D9D5041D45A5B800E61924 /* LiuqsEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */; };
 		73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D9D5061D45A65200E61924 /* UIImage+Extension.m */; };
@@ -28,7 +33,6 @@
 		73E91F211C8543980049D49A /* LiuqsEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F201C8543980049D49A /* LiuqsEmotionView.m */; };
 		73E91F261C8544680049D49A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F251C8544680049D49A /* UIView+Extension.m */; };
 		73E91F2C1C85448B0049D49A /* NSAttributedString+EmojiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F2A1C85448B0049D49A /* NSAttributedString+EmojiExtension.m */; };
-		73E91F2F1C8544B90049D49A /* UIImageView+PlayGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F2E1C8544B90049D49A /* UIImageView+PlayGIF.m */; };
 		73E91F331C854C8E0049D49A /* LiuqsToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E91F321C854C8E0049D49A /* LiuqsToolbarView.m */; };
 		73E91F821C8572C90049D49A /* [10].png in Resources */ = {isa = PBXBuildFile; fileRef = 73E91F351C8572C90049D49A /* [10].png */; };
 		73E91F831C8572C90049D49A /* [11].png in Resources */ = {isa = PBXBuildFile; fileRef = 73E91F361C8572C90049D49A /* [11].png */; };
@@ -145,6 +149,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7300734B1D4768F1005CE987 /* LiuqsEmotionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsEmotionLabel.h; sourceTree = "<group>"; };
+		7300734C1D4768F1005CE987 /* LiuqsEmotionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsEmotionLabel.m; sourceTree = "<group>"; };
+		7300734E1D476C61005CE987 /* 014@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "014@2x.gif"; sourceTree = "<group>"; };
 		736300F01C8693FE007236DA /* LiuqsChatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChatViewCell.h; sourceTree = "<group>"; };
 		736300F11C8693FE007236DA /* LiuqsChatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsChatViewCell.m; sourceTree = "<group>"; };
 		736300F31C869428007236DA /* LiuqsChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChatMessage.h; sourceTree = "<group>"; };
@@ -176,6 +183,11 @@
 		73A9E0061C73206B006BE9A5 /* LiuqsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiuqsPrefixHeader.pch; sourceTree = "<group>"; };
 		73A9E0081C732677006BE9A5 /* LiuqsChtaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChtaDetailViewController.h; sourceTree = "<group>"; };
 		73A9E0091C732677006BE9A5 /* LiuqsChtaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsChtaDetailViewController.m; sourceTree = "<group>"; };
+		73D3740E1D4840B9008A1AB2 /* LiuqsEmotionTags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmotionTags.plist; sourceTree = "<group>"; };
+		73D374181D4853E2008A1AB2 /* UIImageView+PlayGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+PlayGIF.h"; path = "UIImageView-PlayGIF/UIImageView+PlayGIF.h"; sourceTree = "<group>"; };
+		73D374191D4853E2008A1AB2 /* UIImageView+PlayGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+PlayGIF.m"; path = "UIImageView-PlayGIF/UIImageView+PlayGIF.m"; sourceTree = "<group>"; };
+		73D3741E1D4855A7008A1AB2 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		73D3741F1D4855A7008A1AB2 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsGifEmoji.plist; sourceTree = "<group>"; };
 		73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmoji.plist; sourceTree = "<group>"; };
 		73D9D5051D45A65200E61924 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -188,8 +200,6 @@
 		73E91F251C8544680049D49A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		73E91F291C85448B0049D49A /* NSAttributedString+EmojiExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+EmojiExtension.h"; sourceTree = "<group>"; };
 		73E91F2A1C85448B0049D49A /* NSAttributedString+EmojiExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+EmojiExtension.m"; sourceTree = "<group>"; };
-		73E91F2D1C8544B90049D49A /* UIImageView+PlayGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PlayGIF.h"; sourceTree = "<group>"; };
-		73E91F2E1C8544B90049D49A /* UIImageView+PlayGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+PlayGIF.m"; sourceTree = "<group>"; };
 		73E91F311C854C8E0049D49A /* LiuqsToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsToolbarView.h; sourceTree = "<group>"; };
 		73E91F321C854C8E0049D49A /* LiuqsToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsToolbarView.m; sourceTree = "<group>"; };
 		73E91F351C8572C90049D49A /* [10].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "[10].png"; sourceTree = "<group>"; };
@@ -328,6 +338,7 @@
 		736300EC1C8693A0007236DA /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7300734E1D476C61005CE987 /* 014@2x.gif */,
 				736300F01C8693FE007236DA /* LiuqsChatViewCell.h */,
 				736300F11C8693FE007236DA /* LiuqsChatViewCell.m */,
 			);
@@ -465,8 +476,11 @@
 				73E91F2A1C85448B0049D49A /* NSAttributedString+EmojiExtension.m */,
 				73A9E0001C731C00006BE9A5 /* LiuqsChangeStrTool.h */,
 				73A9E0011C731C00006BE9A5 /* LiuqsChangeStrTool.m */,
+				7300734B1D4768F1005CE987 /* LiuqsEmotionLabel.h */,
+				7300734C1D4768F1005CE987 /* LiuqsEmotionLabel.m */,
 				73E91F311C854C8E0049D49A /* LiuqsToolbarView.h */,
 				73E91F321C854C8E0049D49A /* LiuqsToolbarView.m */,
+				73D3740E1D4840B9008A1AB2 /* LiuqsEmotionTags.plist */,
 				73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */,
 				73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */,
 			);
@@ -487,8 +501,10 @@
 		73E91F231C8543F60049D49A /* categorys */ = {
 			isa = PBXGroup;
 			children = (
-				73E91F2D1C8544B90049D49A /* UIImageView+PlayGIF.h */,
-				73E91F2E1C8544B90049D49A /* UIImageView+PlayGIF.m */,
+				73D3741E1D4855A7008A1AB2 /* UIImage+GIF.h */,
+				73D3741F1D4855A7008A1AB2 /* UIImage+GIF.m */,
+				73D374181D4853E2008A1AB2 /* UIImageView+PlayGIF.h */,
+				73D374191D4853E2008A1AB2 /* UIImageView+PlayGIF.m */,
 				73E91F241C8544680049D49A /* UIView+Extension.h */,
 				73E91F251C8544680049D49A /* UIView+Extension.m */,
 				73D9D5051D45A65200E61924 /* UIImage+Extension.h */,
@@ -715,6 +731,7 @@
 				73E91FBF1C8572C90049D49A /* [66].png in Resources */,
 				73E91FB61C8572C90049D49A /* [58].png in Resources */,
 				73E91FEB1C85756B0049D49A /* 2_10.gif in Resources */,
+				7300734F1D476C61005CE987 /* 014@2x.gif in Resources */,
 				73E91FAC1C8572C90049D49A /* [49].png in Resources */,
 				73E91FED1C85756B0049D49A /* 2_12.gif in Resources */,
 				73E91FCE1C8572C90049D49A /* [9].png in Resources */,
@@ -778,6 +795,7 @@
 				73E91FC71C8572C90049D49A /* [73].png in Resources */,
 				73E91FE41C85756B0049D49A /* 2_3.gif in Resources */,
 				73E91FB41C8572C90049D49A /* [56].png in Resources */,
+				73D3740F1D4840B9008A1AB2 /* LiuqsEmotionTags.plist in Resources */,
 				73E91FAE1C8572C90049D49A /* [50].png in Resources */,
 				73E91F941C8572C90049D49A /* [27].png in Resources */,
 				73E91FC21C8572C90049D49A /* [69].png in Resources */,
@@ -835,21 +853,23 @@
 			files = (
 				73E91F2C1C85448B0049D49A /* NSAttributedString+EmojiExtension.m in Sources */,
 				73A9E0021C731C00006BE9A5 /* LiuqsChangeStrTool.m in Sources */,
-				73E91F2F1C8544B90049D49A /* UIImageView+PlayGIF.m in Sources */,
 				736300F21C8693FE007236DA /* LiuqsChatViewCell.m in Sources */,
 				73A9DFEE1C72F9F4006BE9A5 /* LiuqsChatViewController.m in Sources */,
 				73E91F211C8543980049D49A /* LiuqsEmotionView.m in Sources */,
+				73D3741C1D4853E2008A1AB2 /* UIImageView+PlayGIF.m in Sources */,
 				736300F81C8694B1007236DA /* LiuqsCellFrame.m in Sources */,
 				73A9DFEA1C72F7D0006BE9A5 /* LiuqsNavigationController.m in Sources */,
 				73A9E00A1C732677006BE9A5 /* LiuqsChtaDetailViewController.m in Sources */,
 				736300F51C869428007236DA /* LiuqsChatMessage.m in Sources */,
 				73A9DFE71C72F7A1006BE9A5 /* LiuqsTabarController.m in Sources */,
 				73E91F261C8544680049D49A /* UIView+Extension.m in Sources */,
+				7300734D1D4768F1005CE987 /* LiuqsEmotionLabel.m in Sources */,
 				73E91F331C854C8E0049D49A /* LiuqsToolbarView.m in Sources */,
 				73A9DFB51C72E3C6006BE9A5 /* AppDelegate.m in Sources */,
 				73D9D50A1D45B09200E61924 /* LiuqsTextAttachment.m in Sources */,
 				73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */,
 				73A9DFB21C72E3C6006BE9A5 /* main.m in Sources */,
+				73D374201D4855A7008A1AB2 /* UIImage+GIF.m in Sources */,
 				73A9DFF11C72FEDC006BE9A5 /* LiuqsMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

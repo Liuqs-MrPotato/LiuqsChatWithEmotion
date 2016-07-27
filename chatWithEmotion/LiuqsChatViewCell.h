@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LiuqsCellFrame.h"
 #import "LiuqsChatMessage.h"
+#import "LiuqsEmotionLabel.h"
 
 @interface LiuqsChatViewCell : UITableViewCell
 
@@ -20,7 +21,7 @@
 
 @property(nonatomic ,strong)LiuqsCellFrame *cellFrame;
 
-@property(nonatomic ,strong)UILabel *emotionLabel;
+@property(nonatomic ,strong)LiuqsEmotionLabel *emotionLabel;
 
 @property(nonatomic, assign)BOOL isAsync;
 

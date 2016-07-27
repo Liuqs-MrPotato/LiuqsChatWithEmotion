@@ -90,9 +90,7 @@ static NSMutableAttributedString *_resultStr;
         
         if (imageName == nil || imageName.length == 0) break;
         
-        UIImage *image = [UIImage imageNamed:imageName];
-        
-        attachMent.image = image;
+        attachMent.imageName = imageName;
         
         NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attachMent];
         

@@ -155,7 +155,7 @@ static const char * kIndexDurationKey   = "kIndexDurationKey";
 
 - (void)startGIFWithRunLoopMode:(NSString * const)runLoopMode
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (![[PlayGIFManager shared].gifViewHashTable containsObject:self] && (self.gifData || self.gifPath)) {
             CGImageSourceRef gifSourceRef;
             if (self.gifData) {
@@ -178,7 +178,7 @@ static const char * kIndexDurationKey   = "kIndexDurationKey";
     });
     if (![PlayGIFManager shared].displayLink) {
         [PlayGIFManager shared].displayLink = [CADisplayLink displayLinkWithTarget:[PlayGIFManager shared] selector:@selector(play)];
-        [[PlayGIFManager shared].displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:runLoopMode];
+        [[PlayGIFManager shared].displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:runLoopMode];
     }
 }
 
