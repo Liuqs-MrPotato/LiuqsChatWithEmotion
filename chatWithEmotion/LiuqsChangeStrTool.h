@@ -13,4 +13,6 @@
 
 + (NSMutableAttributedString *)changeStrWithStr:(NSString *)string Font:(UIFont *)font TextColor:(UIColor *)textColor;
 
++ (NSString *)changeTextToHtmlStrWithText:(NSString *)text;
+
 @end

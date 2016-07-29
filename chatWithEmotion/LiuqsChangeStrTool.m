@@ -141,4 +141,53 @@ static NSMutableAttributedString *_resultStr;
     _resultStr = result;
 }
 
+
++ (NSString *)changeTextToHtmlStrWithText:(NSString *)text {
+
+    _string = text;
+    // 读取并加载对照表
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"LiuqsEmoji" ofType:@"plist"];
+    
+    _emojiImages = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    return nil;
+}
+
++ (void)getHtmlStrimg {
+
+    //比对结果
+    NSString *regexString = checkStr;
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:nil];
+    
+    NSRange totalRange = NSMakeRange(0, [_string length]);
+    
+    __block NSRange lastRange = NSMakeRange(0, 0);
+    
+    __block NSString *htmlStr;
+    
+    [regex enumerateMatchesInString:_string options:0 range:totalRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+        
+        NSRange currentRange = [result range];
+        
+        NSString *tagString = [_string substringWithRange:currentRange];
+        
+        NSString *imageName = [_emojiImages objectForKey:tagString];
+        
+        if (currentRange.location == 0) {//开头就是表情 [哈哈]。。。。
+            
+            // 创建表情字符创拼接
+        }else if (lastRange.location == 0){//开头是文字的，你好[哈哈]。。。。
+            //先拼接上一段文字然后创建表情字符串拼接
+        
+        }else if (lastRange.location + 1 != currentRange.location) {//表情中间加文字 你好[哈哈]你好。。。。
+            //先拼接上一段文字然后创建表情字符串拼接
+        }else if (lastRange.location + 1 == currentRange.location) {//表情中间不加文字 。。。[哈哈][哈哈]。。。
+            //创建表情拼接
+        }
+        
+    }];
+}
+
+
 @end

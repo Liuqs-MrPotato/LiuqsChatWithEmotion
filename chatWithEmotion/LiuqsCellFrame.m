@@ -36,9 +36,9 @@ static UIWebView *_sizeView;
         self.message.attributedText = (NSMutableAttributedString*)text;
         
         //计算控件frame
-        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width + 15, TextSize.height + 25);
+        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width + 15, TextSize.height + 40);
         //计算cell高度
-        self.cellHeight = TextSize.height + 25;
+        self.cellHeight = TextSize.height + 40;
     }
 }
 

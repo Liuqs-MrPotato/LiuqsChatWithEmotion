@@ -83,12 +83,12 @@
     self.gifView.gifPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@.gif",cellFrame.message.gifName] ofType:nil];
     [self.gifView startGIFWithRunLoopMode:NSRunLoopCommonModes];
     self.lineView.frame = CGRectMake(0, self.cellFrame.cellHeight - 1, screenW, 1);
-//    self.emotionLabel.attributedText = cellFrame.message.attributedText;
-//    self.emotionLabel.frame = cellFrame.emotionLabelFrame;
+    self.emotionLabel.attributedText = cellFrame.message.attributedText;
+    self.emotionLabel.frame = cellFrame.emotionLabelFrame;
 //    NSString *htmlURlStr = [NSString stringWithFormat:@"<body><p style='background-color:null;line-height:23px;font-size:17px;'>%@</p><br></body>",cellFrame.message.text];
 //    [self.textView loadHTMLString:htmlURlStr baseURL:nil];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"text" withExtension:@"html"];
-    [self.textView loadRequest:[NSURLRequest requestWithURL:url]];
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"text" withExtension:@"html"];
+//    [self.textView loadRequest:[NSURLRequest requestWithURL:url]];
     self.textView.frame = cellFrame.emotionLabelFrame;
 }
 
