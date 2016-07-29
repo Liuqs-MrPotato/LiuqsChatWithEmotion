@@ -278,7 +278,8 @@
     if (text.length == 0) {
         
         //了解一下编码格式
-        text = @"[g吐舌]  彩笔，怎么可以输入空格呢？[g抓狂]";
+//        text = @"[g吐舌]  彩笔，怎么可以输入空格呢？[g抓狂]";
+        text = @"[g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂]";
     }
     LiuqsCellFrame *model = [self creatNormalMessageWithText:text];
     [self.dataSourceArray addObject:model];

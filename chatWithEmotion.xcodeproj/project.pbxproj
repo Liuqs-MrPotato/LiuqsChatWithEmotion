@@ -21,7 +21,7 @@
 		733882A71D49AA5E00FC1DD8 /* [71].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882981D49AA5E00FC1DD8 /* [71].gif */; };
 		733882A81D49AA5E00FC1DD8 /* [72].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882991D49AA5E00FC1DD8 /* [72].gif */; };
 		733882AE1D49DD9B00FC1DD8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 733882AD1D49DD9B00FC1DD8 /* UIImage+GIF.m */; };
-		733882B01D4A0E1700FC1DD8 /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 733882AF1D4A0E1700FC1DD8 /* text.html */; };
+		734EFAD71D4AECD700F6D95D /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 734EFAD61D4AECD700F6D95D /* text.html */; };
 		736300F21C8693FE007236DA /* LiuqsChatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F11C8693FE007236DA /* LiuqsChatViewCell.m */; };
 		736300F51C869428007236DA /* LiuqsChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F41C869428007236DA /* LiuqsChatMessage.m */; };
 		736300F81C8694B1007236DA /* LiuqsCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F71C8694B1007236DA /* LiuqsCellFrame.m */; };
@@ -177,7 +177,7 @@
 		733882991D49AA5E00FC1DD8 /* [72].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[72].gif"; sourceTree = "<group>"; };
 		733882AC1D49DD9B00FC1DD8 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		733882AD1D49DD9B00FC1DD8 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
-		733882AF1D4A0E1700FC1DD8 /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
+		734EFAD61D4AECD700F6D95D /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
 		736300F01C8693FE007236DA /* LiuqsChatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChatViewCell.h; sourceTree = "<group>"; };
 		736300F11C8693FE007236DA /* LiuqsChatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsChatViewCell.m; sourceTree = "<group>"; };
 		736300F31C869428007236DA /* LiuqsChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChatMessage.h; sourceTree = "<group>"; };
@@ -508,7 +508,7 @@
 		73A9DFF91C731927006BE9A5 /* LiuqsEmotionView */ = {
 			isa = PBXGroup;
 			children = (
-				733882AF1D4A0E1700FC1DD8 /* text.html */,
+				734EFAD61D4AECD700F6D95D /* text.html */,
 				73E91FCF1C85756B0049D49A /* gif超清 */,
 				7338828D1D49AA5E00FC1DD8 /* Face_gif */,
 				73E91F341C8572C90049D49A /* 静态表情 */,
@@ -852,7 +852,7 @@
 				733882A51D49AA5E00FC1DD8 /* [69].gif in Resources */,
 				7338829F1D49AA5E00FC1DD8 /* [63].gif in Resources */,
 				73E91FE31C85756B0049D49A /* 2_2.gif in Resources */,
-				733882B01D4A0E1700FC1DD8 /* text.html in Resources */,
+				734EFAD71D4AECD700F6D95D /* text.html in Resources */,
 				73E91FC81C8572C90049D49A /* [74].png in Resources */,
 				7338829D1D49AA5E00FC1DD8 /* [61].gif in Resources */,
 				733882A81D49AA5E00FC1DD8 /* [72].gif in Resources */,
