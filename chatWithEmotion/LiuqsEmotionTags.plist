@@ -62,22 +62,17 @@
 	<string>[冷汗]</string>
 	<string>[抓狂]</string>
 	<string>[吐]</string>
-	<string>[白眼]</string>
-	<string>[傲慢]</string>
-	<string>[饥饿]</string>
-	<string>[困]</string>
-	<string>[惊恐]</string>
-	<string>[流汗]</string>
-	<string>[悠闲]</string>
-	<string>[咒骂]</string>
-	<string>[晕]</string>
-	<string>[疯了]</string>
-	<string>[衰]</string>
-	<string>[敲打]</string>
-	<string>[擦汗]</string>
-	<string>[抠鼻]</string>
-	<string>[糗大了]</string>
-	<string>[酷]</string>
-	<string>[猪头]</string>
+	<string>[g吐舌]</string>
+	<string>[g拜拜]</string>
+	<string>[g敲打]</string>
+	<string>[g大哭]</string>
+	<string>[g快哭了]</string>
+	<string>[g抓狂]</string>
+	<string>[g愉快]</string>
+	<string>[g色]</string>
+	<string>[g害羞]</string>
+	<string>[g尴尬]</string>
+	<string>[g傻笑]</string>
+	<string>[g楞]</string>
 </array>
 </plist>

@@ -15,21 +15,23 @@
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 
-@property(nonatomic ,strong)UIImageView *gifView;
+@property(nonatomic, strong)UIImageView *gifView;
 
-@property(nonatomic ,strong)UIImageView *lineView;
+@property(nonatomic, strong)UIImageView *lineView;
 
-@property(nonatomic ,strong)LiuqsCellFrame *cellFrame;
+@property(nonatomic, strong)LiuqsCellFrame *cellFrame;
 
-@property(nonatomic ,strong)LiuqsEmotionLabel *emotionLabel;
+@property(nonatomic, strong)LiuqsEmotionLabel *emotionLabel;
 
 @property(nonatomic, assign)BOOL isAsync;
 
 @property(nonatomic, strong)LiuqsChatMessage *message;
 
-@property(nonatomic,strong)UIButton *headIcon;
+@property(nonatomic, strong)UIButton *headIcon;
 
-@property(nonatomic,strong)UILabel *timeLabel;
+@property(nonatomic, strong)UILabel *timeLabel;
+
+@property(nonatomic, strong)UIWebView *textView;
 
 
 @end

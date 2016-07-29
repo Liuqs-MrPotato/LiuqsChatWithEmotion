@@ -1,4 +1,4 @@
-//
+
 //  UIImageView+PlayGIF.m
 //  UIImageView-PlayGIF
 //

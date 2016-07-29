@@ -8,7 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7300734D1D4768F1005CE987 /* LiuqsEmotionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300734C1D4768F1005CE987 /* LiuqsEmotionLabel.m */; };
-		7300734F1D476C61005CE987 /* 014@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7300734E1D476C61005CE987 /* 014@2x.gif */; };
+		7338829D1D49AA5E00FC1DD8 /* [61].gif in Resources */ = {isa = PBXBuildFile; fileRef = 7338828E1D49AA5E00FC1DD8 /* [61].gif */; };
+		7338829E1D49AA5E00FC1DD8 /* [62].gif in Resources */ = {isa = PBXBuildFile; fileRef = 7338828F1D49AA5E00FC1DD8 /* [62].gif */; };
+		7338829F1D49AA5E00FC1DD8 /* [63].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882901D49AA5E00FC1DD8 /* [63].gif */; };
+		733882A01D49AA5E00FC1DD8 /* [64].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882911D49AA5E00FC1DD8 /* [64].gif */; };
+		733882A11D49AA5E00FC1DD8 /* [65].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882921D49AA5E00FC1DD8 /* [65].gif */; };
+		733882A21D49AA5E00FC1DD8 /* [66].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882931D49AA5E00FC1DD8 /* [66].gif */; };
+		733882A31D49AA5E00FC1DD8 /* [67].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882941D49AA5E00FC1DD8 /* [67].gif */; };
+		733882A41D49AA5E00FC1DD8 /* [68].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882951D49AA5E00FC1DD8 /* [68].gif */; };
+		733882A51D49AA5E00FC1DD8 /* [69].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882961D49AA5E00FC1DD8 /* [69].gif */; };
+		733882A61D49AA5E00FC1DD8 /* [70].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882971D49AA5E00FC1DD8 /* [70].gif */; };
+		733882A71D49AA5E00FC1DD8 /* [71].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882981D49AA5E00FC1DD8 /* [71].gif */; };
+		733882A81D49AA5E00FC1DD8 /* [72].gif in Resources */ = {isa = PBXBuildFile; fileRef = 733882991D49AA5E00FC1DD8 /* [72].gif */; };
+		733882AE1D49DD9B00FC1DD8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 733882AD1D49DD9B00FC1DD8 /* UIImage+GIF.m */; };
+		733882B01D4A0E1700FC1DD8 /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 733882AF1D4A0E1700FC1DD8 /* text.html */; };
 		736300F21C8693FE007236DA /* LiuqsChatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F11C8693FE007236DA /* LiuqsChatViewCell.m */; };
 		736300F51C869428007236DA /* LiuqsChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F41C869428007236DA /* LiuqsChatMessage.m */; };
 		736300F81C8694B1007236DA /* LiuqsCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 736300F71C8694B1007236DA /* LiuqsCellFrame.m */; };
@@ -25,7 +38,6 @@
 		73A9E00A1C732677006BE9A5 /* LiuqsChtaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A9E0091C732677006BE9A5 /* LiuqsChtaDetailViewController.m */; };
 		73D3740F1D4840B9008A1AB2 /* LiuqsEmotionTags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D3740E1D4840B9008A1AB2 /* LiuqsEmotionTags.plist */; };
 		73D3741C1D4853E2008A1AB2 /* UIImageView+PlayGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D374191D4853E2008A1AB2 /* UIImageView+PlayGIF.m */; };
-		73D374201D4855A7008A1AB2 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D3741F1D4855A7008A1AB2 /* UIImage+GIF.m */; };
 		73D9D5021D45A5B300E61924 /* LiuqsGifEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */; };
 		73D9D5041D45A5B800E61924 /* LiuqsEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */; };
 		73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D9D5061D45A65200E61924 /* UIImage+Extension.m */; };
@@ -151,7 +163,21 @@
 /* Begin PBXFileReference section */
 		7300734B1D4768F1005CE987 /* LiuqsEmotionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsEmotionLabel.h; sourceTree = "<group>"; };
 		7300734C1D4768F1005CE987 /* LiuqsEmotionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsEmotionLabel.m; sourceTree = "<group>"; };
-		7300734E1D476C61005CE987 /* 014@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "014@2x.gif"; sourceTree = "<group>"; };
+		7338828E1D49AA5E00FC1DD8 /* [61].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[61].gif"; sourceTree = "<group>"; };
+		7338828F1D49AA5E00FC1DD8 /* [62].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[62].gif"; sourceTree = "<group>"; };
+		733882901D49AA5E00FC1DD8 /* [63].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[63].gif"; sourceTree = "<group>"; };
+		733882911D49AA5E00FC1DD8 /* [64].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[64].gif"; sourceTree = "<group>"; };
+		733882921D49AA5E00FC1DD8 /* [65].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[65].gif"; sourceTree = "<group>"; };
+		733882931D49AA5E00FC1DD8 /* [66].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[66].gif"; sourceTree = "<group>"; };
+		733882941D49AA5E00FC1DD8 /* [67].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[67].gif"; sourceTree = "<group>"; };
+		733882951D49AA5E00FC1DD8 /* [68].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[68].gif"; sourceTree = "<group>"; };
+		733882961D49AA5E00FC1DD8 /* [69].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[69].gif"; sourceTree = "<group>"; };
+		733882971D49AA5E00FC1DD8 /* [70].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[70].gif"; sourceTree = "<group>"; };
+		733882981D49AA5E00FC1DD8 /* [71].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[71].gif"; sourceTree = "<group>"; };
+		733882991D49AA5E00FC1DD8 /* [72].gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[72].gif"; sourceTree = "<group>"; };
+		733882AC1D49DD9B00FC1DD8 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		733882AD1D49DD9B00FC1DD8 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		733882AF1D4A0E1700FC1DD8 /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
 		736300F01C8693FE007236DA /* LiuqsChatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChatViewCell.h; sourceTree = "<group>"; };
 		736300F11C8693FE007236DA /* LiuqsChatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuqsChatViewCell.m; sourceTree = "<group>"; };
 		736300F31C869428007236DA /* LiuqsChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuqsChatMessage.h; sourceTree = "<group>"; };
@@ -186,8 +212,6 @@
 		73D3740E1D4840B9008A1AB2 /* LiuqsEmotionTags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmotionTags.plist; sourceTree = "<group>"; };
 		73D374181D4853E2008A1AB2 /* UIImageView+PlayGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+PlayGIF.h"; path = "UIImageView-PlayGIF/UIImageView+PlayGIF.h"; sourceTree = "<group>"; };
 		73D374191D4853E2008A1AB2 /* UIImageView+PlayGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+PlayGIF.m"; path = "UIImageView-PlayGIF/UIImageView+PlayGIF.m"; sourceTree = "<group>"; };
-		73D3741E1D4855A7008A1AB2 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
-		73D3741F1D4855A7008A1AB2 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		73D9D5011D45A5B300E61924 /* LiuqsGifEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsGifEmoji.plist; sourceTree = "<group>"; };
 		73D9D5031D45A5B800E61924 /* LiuqsEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmoji.plist; sourceTree = "<group>"; };
 		73D9D5051D45A65200E61924 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -324,6 +348,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7338828D1D49AA5E00FC1DD8 /* Face_gif */ = {
+			isa = PBXGroup;
+			children = (
+				7338828E1D49AA5E00FC1DD8 /* [61].gif */,
+				7338828F1D49AA5E00FC1DD8 /* [62].gif */,
+				733882901D49AA5E00FC1DD8 /* [63].gif */,
+				733882911D49AA5E00FC1DD8 /* [64].gif */,
+				733882921D49AA5E00FC1DD8 /* [65].gif */,
+				733882931D49AA5E00FC1DD8 /* [66].gif */,
+				733882941D49AA5E00FC1DD8 /* [67].gif */,
+				733882951D49AA5E00FC1DD8 /* [68].gif */,
+				733882961D49AA5E00FC1DD8 /* [69].gif */,
+				733882971D49AA5E00FC1DD8 /* [70].gif */,
+				733882981D49AA5E00FC1DD8 /* [71].gif */,
+				733882991D49AA5E00FC1DD8 /* [72].gif */,
+			);
+			path = Face_gif;
+			sourceTree = "<group>";
+		};
 		736300EB1C869398007236DA /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,7 +381,6 @@
 		736300EC1C8693A0007236DA /* views */ = {
 			isa = PBXGroup;
 			children = (
-				7300734E1D476C61005CE987 /* 014@2x.gif */,
 				736300F01C8693FE007236DA /* LiuqsChatViewCell.h */,
 				736300F11C8693FE007236DA /* LiuqsChatViewCell.m */,
 			);
@@ -369,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				73A9DFF91C731927006BE9A5 /* LiuqsEmotionView */,
+				73E91F231C8543F60049D49A /* categorys */,
 				73A9DFF21C72FEE4006BE9A5 /* 个人中心 */,
 				73A9DFEB1C72F9D2006BE9A5 /* 聊天 */,
 				73A9DFE41C72F75E006BE9A5 /* main */,
@@ -465,8 +508,9 @@
 		73A9DFF91C731927006BE9A5 /* LiuqsEmotionView */ = {
 			isa = PBXGroup;
 			children = (
-				73E91F231C8543F60049D49A /* categorys */,
+				733882AF1D4A0E1700FC1DD8 /* text.html */,
 				73E91FCF1C85756B0049D49A /* gif超清 */,
+				7338828D1D49AA5E00FC1DD8 /* Face_gif */,
 				73E91F341C8572C90049D49A /* 静态表情 */,
 				73E91F1F1C8543980049D49A /* LiuqsEmotionView.h */,
 				73E91F201C8543980049D49A /* LiuqsEmotionView.m */,
@@ -501,8 +545,8 @@
 		73E91F231C8543F60049D49A /* categorys */ = {
 			isa = PBXGroup;
 			children = (
-				73D3741E1D4855A7008A1AB2 /* UIImage+GIF.h */,
-				73D3741F1D4855A7008A1AB2 /* UIImage+GIF.m */,
+				733882AC1D49DD9B00FC1DD8 /* UIImage+GIF.h */,
+				733882AD1D49DD9B00FC1DD8 /* UIImage+GIF.m */,
 				73D374181D4853E2008A1AB2 /* UIImageView+PlayGIF.h */,
 				73D374191D4853E2008A1AB2 /* UIImageView+PlayGIF.m */,
 				73E91F241C8544680049D49A /* UIView+Extension.h */,
@@ -731,7 +775,6 @@
 				73E91FBF1C8572C90049D49A /* [66].png in Resources */,
 				73E91FB61C8572C90049D49A /* [58].png in Resources */,
 				73E91FEB1C85756B0049D49A /* 2_10.gif in Resources */,
-				7300734F1D476C61005CE987 /* 014@2x.gif in Resources */,
 				73E91FAC1C8572C90049D49A /* [49].png in Resources */,
 				73E91FED1C85756B0049D49A /* 2_12.gif in Resources */,
 				73E91FCE1C8572C90049D49A /* [9].png in Resources */,
@@ -741,6 +784,7 @@
 				73E91FA41C8572C90049D49A /* [41].png in Resources */,
 				73E91FEF1C85756B0049D49A /* 2_14.gif in Resources */,
 				73E91FA51C8572C90049D49A /* [42].png in Resources */,
+				733882A31D49AA5E00FC1DD8 /* [67].gif in Resources */,
 				73E91FB81C8572C90049D49A /* [5].png in Resources */,
 				73E91F9B1C8572C90049D49A /* [33].png in Resources */,
 				73E91F921C8572C90049D49A /* [25].png in Resources */,
@@ -767,10 +811,12 @@
 				73E91FBB1C8572C90049D49A /* [62].png in Resources */,
 				73E91FAD1C8572C90049D49A /* [4].png in Resources */,
 				73D9D5041D45A5B800E61924 /* LiuqsEmoji.plist in Resources */,
+				733882A21D49AA5E00FC1DD8 /* [66].gif in Resources */,
 				73E91FE61C85756B0049D49A /* 2_5.gif in Resources */,
 				73E91F8D1C8572C90049D49A /* [20].png in Resources */,
 				73E91FBE1C8572C90049D49A /* [65].png in Resources */,
 				73E91F8A1C8572C90049D49A /* [18].png in Resources */,
+				733882A01D49AA5E00FC1DD8 /* [64].gif in Resources */,
 				73E91F981C8572C90049D49A /* [30].png in Resources */,
 				73E91FEC1C85756B0049D49A /* 2_11.gif in Resources */,
 				73E91FC31C8572C90049D49A /* [6].png in Resources */,
@@ -792,6 +838,7 @@
 				73E91FC51C8572C90049D49A /* [71].png in Resources */,
 				73E91FF21C85756B0049D49A /* 2_17.gif in Resources */,
 				73E91F901C8572C90049D49A /* [23].png in Resources */,
+				733882A41D49AA5E00FC1DD8 /* [68].gif in Resources */,
 				73E91FC71C8572C90049D49A /* [73].png in Resources */,
 				73E91FE41C85756B0049D49A /* 2_3.gif in Resources */,
 				73E91FB41C8572C90049D49A /* [56].png in Resources */,
@@ -801,18 +848,26 @@
 				73E91FC21C8572C90049D49A /* [69].png in Resources */,
 				73E91F8B1C8572C90049D49A /* [19].png in Resources */,
 				73E91F821C8572C90049D49A /* [10].png in Resources */,
+				733882A61D49AA5E00FC1DD8 /* [70].gif in Resources */,
+				733882A51D49AA5E00FC1DD8 /* [69].gif in Resources */,
+				7338829F1D49AA5E00FC1DD8 /* [63].gif in Resources */,
 				73E91FE31C85756B0049D49A /* 2_2.gif in Resources */,
+				733882B01D4A0E1700FC1DD8 /* text.html in Resources */,
 				73E91FC81C8572C90049D49A /* [74].png in Resources */,
+				7338829D1D49AA5E00FC1DD8 /* [61].gif in Resources */,
+				733882A81D49AA5E00FC1DD8 /* [72].gif in Resources */,
 				73E91FF11C85756B0049D49A /* 2_16.gif in Resources */,
 				73E91FAA1C8572C90049D49A /* [47].png in Resources */,
 				73E91F851C8572C90049D49A /* [13].png in Resources */,
 				73E91FC41C8572C90049D49A /* [70].png in Resources */,
 				73E91F9F1C8572C90049D49A /* [37].png in Resources */,
 				73E91F841C8572C90049D49A /* [12].png in Resources */,
+				7338829E1D49AA5E00FC1DD8 /* [62].gif in Resources */,
 				73E91F8F1C8572C90049D49A /* [22].png in Resources */,
 				73E91FE91C85756B0049D49A /* 2_8.gif in Resources */,
 				73E91FB91C8572C90049D49A /* [60].png in Resources */,
 				73E91FEE1C85756B0049D49A /* 2_13.gif in Resources */,
+				733882A71D49AA5E00FC1DD8 /* [71].gif in Resources */,
 				73E91FF01C85756B0049D49A /* 2_15.gif in Resources */,
 				73E91FF31C85756B0049D49A /* 2_18.gif in Resources */,
 				73E91F961C8572C90049D49A /* [29].png in Resources */,
@@ -821,6 +876,7 @@
 				73E91FC61C8572C90049D49A /* [72].png in Resources */,
 				73E91FB01C8572C90049D49A /* [52].png in Resources */,
 				73E91F971C8572C90049D49A /* [2].png in Resources */,
+				733882A11D49AA5E00FC1DD8 /* [65].gif in Resources */,
 				73E91F871C8572C90049D49A /* [15].png in Resources */,
 				73E91FA01C8572C90049D49A /* [38].png in Resources */,
 				73E91FC11C8572C90049D49A /* [68].png in Resources */,
@@ -869,7 +925,7 @@
 				73D9D50A1D45B09200E61924 /* LiuqsTextAttachment.m in Sources */,
 				73D9D5071D45A65200E61924 /* UIImage+Extension.m in Sources */,
 				73A9DFB21C72E3C6006BE9A5 /* main.m in Sources */,
-				73D374201D4855A7008A1AB2 /* UIImage+GIF.m in Sources */,
+				733882AE1D49DD9B00FC1DD8 /* UIImage+GIF.m in Sources */,
 				73A9DFF11C72FEDC006BE9A5 /* LiuqsMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

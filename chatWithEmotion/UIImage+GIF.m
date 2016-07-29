@@ -41,7 +41,7 @@
         }
 
         if (!duration) {
-            duration = (1.0f / 10.0f) * count;
+            duration = (1.0f / 10.0f) * count + 0.08;
         }
 
         animatedImage = [UIImage animatedImageWithImages:images duration:duration];
@@ -60,13 +60,13 @@
 
     NSNumber *delayTimeUnclampedProp = gifProperties[(NSString *)kCGImagePropertyGIFUnclampedDelayTime];
     if (delayTimeUnclampedProp) {
-        frameDuration = [delayTimeUnclampedProp floatValue];
+        frameDuration = [delayTimeUnclampedProp floatValue] + 0.08;
     }
     else {
 
         NSNumber *delayTimeProp = gifProperties[(NSString *)kCGImagePropertyGIFDelayTime];
         if (delayTimeProp) {
-            frameDuration = [delayTimeProp floatValue];
+            frameDuration = [delayTimeProp floatValue] + 0.08;
         }
     }
 

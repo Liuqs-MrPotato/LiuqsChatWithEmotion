@@ -13,12 +13,14 @@
 
 @property(nonatomic, strong)LiuqsChatMessage *message;
 
-@property(nonatomic, assign)CGFloat cellHeight;
+@property(nonatomic, assign)CGFloat  cellHeight;
 
-@property(nonatomic, assign)CGRect gifViewFrame;
+@property(nonatomic, assign)CGRect   gifViewFrame;
 
-@property(nonatomic, assign)CGRect emotionLabelFrame;
+@property(nonatomic, assign)CGRect   emotionLabelFrame;
 
-@property(nonatomic, assign)CGRect headIconFrame;
+@property(nonatomic, assign)CGRect   headIconFrame;
+
+@property(nonatomic, copy)  NSString *htmlURlStr;
 
 @end

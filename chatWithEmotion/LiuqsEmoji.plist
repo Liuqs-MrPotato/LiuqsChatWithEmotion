@@ -12,8 +12,6 @@
 	<string>[23]</string>
 	<key>[偷笑]</key>
 	<string>[13]</string>
-	<key>[傲慢]</key>
-	<string>[62]</string>
 	<key>[再见]</key>
 	<string>[27]</string>
 	<key>[冷汗]</key>
@@ -30,8 +28,6 @@
 	<string>[52]</string>
 	<key>[呲牙]</key>
 	<string>[15]</string>
-	<key>[咒骂]</key>
-	<string>[68]</string>
 	<key>[咖啡]</key>
 	<string>[6]</string>
 	<key>[哈欠]</key>
@@ -42,8 +38,6 @@
 	<string>[11]</string>
 	<key>[嘴唇]</key>
 	<string>[38]</string>
-	<key>[困]</key>
-	<string>[64]</string>
 	<key>[坏笑]</key>
 	<string>[28]</string>
 	<key>[大哭]</key>
@@ -70,20 +64,12 @@
 	<string>[39]</string>
 	<key>[快哭了]</key>
 	<string>[49]</string>
-	<key>[悠闲]</key>
-	<string>[67]</string>
-	<key>[惊恐]</key>
-	<string>[65]</string>
 	<key>[惊讶]</key>
 	<string>[57]</string>
 	<key>[愉快]</key>
 	<string>[22]</string>
 	<key>[憨笑]</key>
 	<string>[12]</string>
-	<key>[抓狂]</key>
-	<string>[59]</string>
-	<key>[抠鼻]</key>
-	<string>[74]</string>
 	<key>[抱拳]</key>
 	<string>[7]</string>
 	<key>[拥抱]</key>
@@ -94,46 +80,28 @@
 	<string>[4]</string>
 	<key>[撇嘴]</key>
 	<string>[42]</string>
-	<key>[擦汗]</key>
-	<string>[73]</string>
-	<key>[敲打]</key>
-	<string>[72]</string>
-	<key>[晕]</key>
-	<string>[69]</string>
 	<key>[月亮]</key>
 	<string>[30]</string>
-	<key>[流汗]</key>
-	<string>[66]</string>
 	<key>[流泪]</key>
 	<string>[16]</string>
 	<key>[爱心]</key>
 	<string>[19]</string>
-	<key>[猪头]</key>
-	<string>[77]</string>
 	<key>[玫瑰]</key>
 	<string>[2]</string>
 	<key>[疑问]</key>
 	<string>[10]</string>
-	<key>[疯了]</key>
-	<string>[70]</string>
-	<key>[白眼]</key>
-	<string>[61]</string>
 	<key>[睡]</key>
 	<string>[54]</string>
 	<key>[礼物]</key>
 	<string>[31]</string>
 	<key>[篮球]</key>
 	<string>[36]</string>
-	<key>[糗大了]</key>
-	<string>[75]</string>
 	<key>[胜利]</key>
 	<string>[40]</string>
 	<key>[色]</key>
 	<string>[24]</string>
 	<key>[蛋糕]</key>
 	<string>[32]</string>
-	<key>[衰]</key>
-	<string>[71]</string>
 	<key>[西瓜]</key>
 	<string>[33]</string>
 	<key>[调皮]</key>
@@ -150,11 +118,35 @@
 	<string>[50]</string>
 	<key>[难过]</key>
 	<string>[21]</string>
-	<key>[饥饿]</key>
-	<string>[63]</string>
 	<key>[饭]</key>
 	<string>[18]</string>
 	<key>[鼓掌]</key>
 	<string>[9]</string>
+	<key>[抓狂]</key>
+	<string>[59]</string>
+	<key>[g吐舌]</key>
+	<string>[61]</string>
+	<key>[g拜拜]</key>
+	<string>[62]</string>
+	<key>[g敲打]</key>
+	<string>[63]</string>
+	<key>[g大哭]</key>
+	<string>[64]</string>
+	<key>[g快哭了]</key>
+	<string>[65]</string>
+	<key>[g抓狂]</key>
+	<string>[66]</string>
+	<key>[g愉快]</key>
+	<string>[67]</string>
+	<key>[g色]</key>
+	<string>[68]</string>
+	<key>[g害羞]</key>
+	<string>[69]</string>
+	<key>[g尴尬]</key>
+	<string>[70]</string>
+	<key>[g傻笑]</key>
+	<string>[71]</string>
+	<key>[g楞]</key>
+	<string>[72]</string>
 </dict>
 </plist>

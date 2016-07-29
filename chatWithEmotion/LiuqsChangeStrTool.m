@@ -46,13 +46,13 @@ static NSMutableAttributedString *_resultStr;
     
     [paragraphStyle setLineSpacing:4.0f];
     
-    NSDictionary *dict = @{NSFontAttributeName:_font,NSParagraphStyleAttributeName:paragraphStyle};
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_textColor,NSForegroundColorAttributeName,_font,NSFontAttributeName,paragraphStyle,NSParagraphStyleAttributeName,nil];
     
     CGSize maxsize = CGSizeMake(1000, MAXFLOAT);
     
     _emotionSize = [@"/" boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
     
-    _attStr = [[NSMutableAttributedString alloc]initWithString:_string];
+    _attStr = [[NSMutableAttributedString alloc]initWithString:_string attributes:dict];
 }
 
 
@@ -90,9 +90,28 @@ static NSMutableAttributedString *_resultStr;
         
         if (imageName == nil || imageName.length == 0) break;
         
-        attachMent.imageName = imageName;
+        NSString *cheakStr = [imageName substringWithRange:NSMakeRange(1, 2)];
+       
+        if ([cheakStr intValue] > 60) {
+            
+            NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"gif"];
+            
+            NSData *gifData = [NSData dataWithContentsOfFile:path];
+            
+            attachMent.contents = gifData;
+            
+            attachMent.fileType = @"gif";
+            
+//            attachMent.imageName = imageName;
+            
+//            attachMent.emotionType = LiuqsEmotionTypeGif;
+            
+        }else {
         
-        attachMent.image = [UIImage imageNamed:imageName];
+//            attachMent.emotionType = LiuqsEmotionTypePng;
+            
+            attachMent.image = [UIImage imageNamed:imageName]; 
+        }
         
         NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attachMent];
         

@@ -8,13 +8,15 @@
 
 #import "LiuqsTextAttachment.h"
 
+#define emotionRate 1.0
+
 @implementation LiuqsTextAttachment
 
 - (CGRect)attachmentBoundsForTextContainer:(NSTextContainer *)textContainer proposedLineFragment:(CGRect)lineFrag glyphPosition:(CGPoint)position characterIndex:(NSUInteger)charIndex {
     
-    self.emotionRect = CGRectMake(position.x, position.y, _emojiSize.width, _emojiSize.height);
+    self.emotionRect = CGRectMake(position.x, position.y + 0.5, _emojiSize.width * emotionRate, _emojiSize.height * emotionRate);
     
-    return CGRectMake(0, -3, _emojiSize.width, _emojiSize.height);
+    return CGRectMake(0, -4, _emojiSize.width * emotionRate, _emojiSize.height * emotionRate);
 }
 
 

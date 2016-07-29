@@ -307,11 +307,11 @@ static NSDictionary *_emojiStaticImages;
             btn.y = Y - space / 3;
         }else {
             
-            [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"[%ld]",(long)btn.tag]] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"[%ld].gif",(long)btn.tag]] forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(insertEmoji:) forControlEvents:UIControlEventTouchUpInside];
         }
         
-        if (i == 19 || i == 18 || i == 17) {
+        if (i >= 12) {
             btn.userInteractionEnabled = NO;
         }
         [self.emotonViewPageFour addSubview:btn];
@@ -432,7 +432,19 @@ static NSDictionary *_emojiStaticImages;
     [self emotionBtnDidClick:btn];
     LiuqsTextAttachment *emojiTextAttachment = [LiuqsTextAttachment new];
     emojiTextAttachment.emojiTag = _emojiTags[(NSUInteger) btn.tag - 1];
-    NSString *imageName = [_emojiStaticImages objectForKey:_emojiTags[(NSUInteger) btn.tag - 1]];
+    
+    NSLog(@"emojiName:%@ btntag:%ld",_emojiTags[(NSUInteger) btn.tag - 1],(long)btn.tag);
+    NSString *imageName;
+    if (btn.tag > 60) {
+        
+        NSString *shortName = [_emojiStaticImages objectForKey:_emojiTags[(NSUInteger) btn.tag - 1]];
+        
+        imageName = [NSString stringWithFormat:@"%@.gif",shortName];
+        
+    }else {
+        
+        imageName = [_emojiStaticImages objectForKey:_emojiTags[(NSUInteger) btn.tag - 1]];
+    }
     emojiTextAttachment.image = [UIImage imageNamed:imageName];
     emojiTextAttachment.emojiSize = CGSizeMake(_EMOJI_MAX_SIZE, _EMOJI_MAX_SIZE);
     [_IputView.textStorage insertAttributedString:[NSAttributedString attributedStringWithAttachment:emojiTextAttachment] atIndex:_IputView.selectedRange.location];
