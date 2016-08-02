@@ -150,44 +150,56 @@ static NSMutableAttributedString *_resultStr;
     
     _emojiImages = [NSDictionary dictionaryWithContentsOfFile:path];
     
-    return nil;
+    return [self getHtmlStrimg];
 }
 
-+ (void)getHtmlStrimg {
++ (NSString *)getHtmlStrimg {
 
-    //比对结果
-    NSString *regexString = checkStr;
+    [self executeMatch];
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:nil];
+    __block NSMutableString *htmlStr = [NSMutableString stringWithString:_string];
     
-    NSRange totalRange = NSMakeRange(0, [_string length]);
+    __weak __typeof__(self) weakSelf = self;
     
-    __block NSRange lastRange = NSMakeRange(0, 0);
-    
-    __block NSString *htmlStr;
-    
-    [regex enumerateMatchesInString:_string options:0 range:totalRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+    for (NSUInteger i = _matches.count; i > 0; i --) {
         
-        NSRange currentRange = [result range];
+        NSTextCheckingResult *match = [_matches objectAtIndex:i - 1];
+        
+        NSRange currentRange = [match range];
         
         NSString *tagString = [_string substringWithRange:currentRange];
         
         NSString *imageName = [_emojiImages objectForKey:tagString];
         
-        if (currentRange.location == 0) {//开头就是表情 [哈哈]。。。。
-            
-            // 创建表情字符创拼接
-        }else if (lastRange.location == 0){//开头是文字的，你好[哈哈]。。。。
-            //先拼接上一段文字然后创建表情字符串拼接
+        NSString *imageStr = [weakSelf createEmotionShortStrWithImageName:imageName];
         
-        }else if (lastRange.location + 1 != currentRange.location) {//表情中间加文字 你好[哈哈]你好。。。。
-            //先拼接上一段文字然后创建表情字符串拼接
-        }else if (lastRange.location + 1 == currentRange.location) {//表情中间不加文字 。。。[哈哈][哈哈]。。。
-            //创建表情拼接
-        }
-        
-    }];
+        [htmlStr replaceCharactersInRange:currentRange withString:imageStr];
+    }
+    
+    return htmlStr;
 }
+
++ (NSString *)createEmotionShortStrWithImageName:(NSString *)imageName {
+    
+    NSString *cheakStr = [imageName substringWithRange:NSMakeRange(1, 2)];
+    
+    NSString *type = [NSString string];
+    
+    if ([cheakStr intValue] > 60) {type = @"gif";}else{type = @"png";}
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:type];
+
+    NSURL *imageUrl = [NSURL fileURLWithPath:path];
+    
+    NSString *result = [NSString stringWithFormat:@"<img src='%@' height='23.8' width='23.8'>",imageUrl.absoluteString];
+    
+    return result;
+    
+}
+
+
+
+
 
 
 @end

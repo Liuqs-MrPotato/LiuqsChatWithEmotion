@@ -8,7 +8,6 @@
 
 #import "LiuqsCellFrame.h"
 
-static UIWebView *_sizeView;
 
 @implementation LiuqsCellFrame
 
@@ -24,24 +23,29 @@ static UIWebView *_sizeView;
         
     }else if ([message.type isEqualToString:@"message"]) {
         
-        //匹对字符串，获取富文本
+//        匹对字符串，获取富文本
         NSMutableAttributedString *text = [LiuqsChangeStrTool changeStrWithStr:message.text Font:[UIFont systemFontOfSize:20] TextColor:[UIColor blackColor]];
         CGSize maxsize = CGSizeMake(screenW - 20, MAXFLOAT);
-        //设置富文本的参数
+//        设置富文本的参数
         [text addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:17.0f] range:NSMakeRange(0, text.length)];
 //        文字自适应
         CGSize TextSize = [text boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
 //        CGSize TextSize = [self getSizeWithFont:[UIFont systemFontOfSize:17] andText:message.text];
-//        23.9图片宽高
+
         self.message.attributedText = (NSMutableAttributedString*)text;
         
+//        NSString *htmlStr = [LiuqsChangeStrTool changeTextToHtmlStrWithText:message.text];
+        
+//        self.htmlURlStr = htmlStr;
+        
         //计算控件frame
-        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width + 15, TextSize.height + 40);
+        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width, TextSize.height);
+        
         //计算cell高度
-        self.cellHeight = TextSize.height + 40;
+        self.cellHeight = TextSize.height;
+    
     }
 }
-
 
 //动态计算size方法
 - (CGSize )getSizeWithFont:(UIFont *)font andText:(NSString *)text{
