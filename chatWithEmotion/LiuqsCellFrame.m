@@ -32,17 +32,17 @@
         CGSize TextSize = [text boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
 //        CGSize TextSize = [self getSizeWithFont:[UIFont systemFontOfSize:17] andText:message.text];
 
-        self.message.attributedText = (NSMutableAttributedString*)text;
+//        self.message.attributedText = (NSMutableAttributedString*)text;
         
-//        NSString *htmlStr = [LiuqsChangeStrTool changeTextToHtmlStrWithText:message.text];
+        NSString *htmlStr = [LiuqsChangeStrTool changeTextToHtmlStrWithText:message.text];
         
-//        self.htmlURlStr = htmlStr;
+        self.htmlURlStr = htmlStr;
         
         //计算控件frame
-        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width, TextSize.height);
+        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width + 7.5, TextSize.height + 2);
         
         //计算cell高度
-        self.cellHeight = TextSize.height;
+        self.cellHeight = TextSize.height + 2;
     
     }
 }

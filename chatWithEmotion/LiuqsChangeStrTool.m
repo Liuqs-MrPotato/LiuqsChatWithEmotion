@@ -191,7 +191,7 @@ static NSMutableAttributedString *_resultStr;
 
     NSURL *imageUrl = [NSURL fileURLWithPath:path];
     
-    NSString *result = [NSString stringWithFormat:@"<img src='%@' height='23.8' width='23.8'>",imageUrl.absoluteString];
+    NSString *result = [NSString stringWithFormat:@"<img src='%@' height='%f' width='%f'>",imageUrl.absoluteString,_emotionSize.height,_emotionSize.height];
     
     return result;
     
