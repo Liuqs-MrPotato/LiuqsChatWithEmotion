@@ -36,8 +36,8 @@
         self.textView.userInteractionEnabled = NO;
         self.textView.opaque = NO;
         self.textView.backgroundColor = [UIColor clearColor];
-//        self.textView.scrollView.backgroundColor = [UIColor redColor];
-        self.textView.scrollView.contentInset = UIEdgeInsetsMake(-7.5, -7.5, 0, 0);
+        self.textView.scrollView.backgroundColor = [UIColor redColor];
+        self.textView.scrollView.contentInset = UIEdgeInsetsMake(-7.5 * screenRate, -7.5 * screenRate, 0, 0);
         [self clearWebViewBackground:self.textView];
         [self.contentView addSubview:self.textView];
         
@@ -87,7 +87,7 @@
     self.lineView.frame = CGRectMake(0, self.cellFrame.cellHeight - 1, screenW, 1);
 //    self.emotionLabel.attributedText = cellFrame.message.attributedText;
 //    self.emotionLabel.frame = cellFrame.emotionLabelFrame;
-    NSString *htmlURlStr = [NSString stringWithFormat:@"<meta charset='UTF-8'><div><p style='font-size:17px;line-height:24px;'>%@</p></div>",cellFrame.htmlURlStr];
+    NSString *htmlURlStr = [NSString stringWithFormat:@"<div><p style='font-size:17px;line-height:24px;'>%@</p></div>",cellFrame.htmlURlStr];
     [self.textView loadHTMLString:htmlURlStr baseURL:nil];
 //    NSURL *url = [[NSBundle mainBundle] URLForResource:@"text" withExtension:@"html"];
 //    [self.textView loadRequest:[NSURLRequest requestWithURL:url]];

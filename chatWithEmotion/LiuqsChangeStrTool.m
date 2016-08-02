@@ -194,12 +194,7 @@ static NSMutableAttributedString *_resultStr;
     NSString *result = [NSString stringWithFormat:@"<img src='%@' height='%f' width='%f'>",imageUrl.absoluteString,_emotionSize.height,_emotionSize.height];
     
     return result;
-    
 }
-
-
-
-
 
 
 @end

@@ -39,7 +39,7 @@
         self.htmlURlStr = htmlStr;
         
         //计算控件frame
-        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width + 7.5, TextSize.height + 2);
+        self.emotionLabelFrame = CGRectMake(10, 0, TextSize.width + 7.5  , TextSize.height + 2);
         
         //计算cell高度
         self.cellHeight = TextSize.height + 2;

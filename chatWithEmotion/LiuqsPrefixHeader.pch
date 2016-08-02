@@ -12,6 +12,7 @@
 //屏幕尺寸
 #define screenH [UIScreen mainScreen].bounds.size.height
 #define screenW [UIScreen mainScreen].bounds.size.width
+#define screenRate screenW / 320
 
 //头文件
 #import "UIView+Extension.h"
