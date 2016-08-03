@@ -88,8 +88,8 @@ static NSMutableAttributedString *_resultStr;
         
         NSString *imageName = [_emojiImages objectForKey:tagString];
         
-        if (imageName == nil || imageName.length == 0) break;
-        
+        if (imageName == nil || imageName.length == 0) continue;
+        //这里有个问题，需要先判断是否有图片，没有图片的话应该不操作，因为现在换用html处理，先不改！
         NSString *cheakStr = [imageName substringWithRange:NSMakeRange(1, 2)];
        
         if ([cheakStr intValue] > 60) {
@@ -102,13 +102,7 @@ static NSMutableAttributedString *_resultStr;
             
             attachMent.fileType = @"gif";
             
-//            attachMent.imageName = imageName;
-            
-//            attachMent.emotionType = LiuqsEmotionTypeGif;
-            
         }else {
-        
-//            attachMent.emotionType = LiuqsEmotionTypePng;
             
             attachMent.image = [UIImage imageNamed:imageName]; 
         }
