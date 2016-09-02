@@ -1,5 +1,7 @@
 # LiuqsChatWithEmotion
 
+这个demo更多的是写实现的思路，看起来比较粗糙，比如，键盘的弹收逻辑，聊天的小气泡适应的！在swift版本中这些处理的都比较好，想看聊天框架的可以去看swift项目：https://github.com/LMMIsGood/LiuqsChatSwift。 oc和swift的区别应该只是在语法上，思路全都一样！
+
 实现效果
 
 键盘部分的展示：
