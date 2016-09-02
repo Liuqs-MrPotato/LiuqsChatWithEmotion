@@ -18,14 +18,16 @@ typedef enum : NSUInteger {
 
 @interface LiuqsTextAttachment : NSTextAttachment
 
-@property(nonatomic, copy)   NSString *imageName;
+//@property(nonatomic, copy)   NSString *imageName;
 
+///用来记录区分表情
 @property(nonatomic, strong) NSString *emojiTag;
 
+///表情尺寸
 @property(nonatomic, assign) CGSize   emojiSize;
 
-@property(nonatomic, assign) CGRect   emotionRect;
+//@property(nonatomic, assign) CGRect   emotionRect;
 
-@property(nonatomic, assign) LiuqsEmotionType emotionType;
+//@property(nonatomic, assign) LiuqsEmotionType emotionType;
 
 @end

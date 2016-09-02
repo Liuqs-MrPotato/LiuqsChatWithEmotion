@@ -9,6 +9,7 @@
 
 @implementation NSAttributedString (EmojiExtension)
 
+//用来获取textview中的字符串（本质就是遍历富文本，把其中的附件替换成文本，比如：你好呀[开心]）
 - (NSString *)getPlainString {
     
     NSMutableString *plainString = [NSMutableString stringWithString:self.string];

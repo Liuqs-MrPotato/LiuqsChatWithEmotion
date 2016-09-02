@@ -26,11 +26,12 @@ static NSDictionary *_emojiStaticImages;
 #define gifRowCount 4
 
 @interface LiuqsEmotionView ()
-
+//表情大小需要根据字体计算
 @property(assign, nonatomic)CGFloat       EMOJI_MAX_SIZE;
-
+//键盘的pageControl
 @property (nonatomic, weak) UIPageControl *pageControl;
 
+//以下是放表情按钮的视图，多页（这样做有些low）
 @property (strong, nonatomic)UIImageView  *emotonViewPageOne;
 
 @property (strong, nonatomic)UIImageView  *emotonViewPageTwo;
@@ -47,16 +48,18 @@ static NSDictionary *_emojiStaticImages;
 
 @property (strong, nonatomic)UIImageView  *emotonViewPageEight;
 
+//用来放上边页面的scrollview
 @property(strong, nonatomic)UIScrollView  *pageView;
-
+//字体大小，用来计算表情尺寸
 @property(strong, nonatomic)UIFont        *font;
-
+//间距
 @property(assign,nonatomic)CGFloat        gap;
-
+//底部按钮条，现在用不到，当多表情类型多的时候可以滑动
 @property(strong,nonatomic)UIScrollView   *scrollBtnsView;
-
+//用来放底部按钮横条
 @property(strong,nonatomic)UIButton       *btnsBar;
 
+//普通表情
 @property(strong,nonatomic)UIButton       *emotionBtn;
 
 @property(strong,nonatomic)UIButton       *springBtn;
@@ -66,12 +69,14 @@ static NSDictionary *_emojiStaticImages;
 
 @implementation LiuqsEmotionView
 
+//当输入框被赋值时执行这个方法
 -(void)setIputView:(UITextView *)IputView {
     
     _IputView = IputView;
     [self setSomeProperty];
 }
 
+//初始化一些数据，计算按钮大小，根据输入框的字体
 - (void)setSomeProperty {
 
     if (!self.IputView.font)
@@ -80,7 +85,7 @@ static NSDictionary *_emojiStaticImages;
     _EMOJI_MAX_SIZE = [self heightWithFont:self.IputView.font];
 }
 
-
+//初始化方法
 - (instancetype)initWithFrame:(CGRect)frame {
     
    self = [super initWithFrame:frame];
@@ -104,6 +109,7 @@ static NSDictionary *_emojiStaticImages;
     return self;
 }
 
+//加载plist文件中的对照表
 - (void)initEmojiDatas {
     
     self.sendBtn.enabled        = NO;
@@ -133,6 +139,7 @@ static NSDictionary *_emojiStaticImages;
     [self createScrollBtnsView];
 }
 
+//创建底部按钮栏
 - (void)cteateBottomBtnBar {
 
     UIButton *btnsBar = [[UIButton alloc]initWithFrame:CGRectMake(0, self.emotonViewPageOne.frame.size.height + 15, screenW, emotionW + 5)];
@@ -154,6 +161,7 @@ static NSDictionary *_emojiStaticImages;
     btnsBar.backgroundColor = BACKGROUND_COLOR;
 }
 
+// 发送按钮
 - (void)createSendBtn {
 
     UIButton *sendBtn = [[UIButton alloc]initWithFrame:CGRectMake(screenW * 6 / 7, 0, screenW / 7, _btnsBar.frame.size.height)];
@@ -197,6 +205,7 @@ static NSDictionary *_emojiStaticImages;
     [self createEmotionBtns];
 }
 
+//创建不同类型的表情按钮
 - (void)createEmotionBtns {
     
     for (int i = 0; i <emotionBtnsCount; i ++) {
@@ -229,7 +238,7 @@ static NSDictionary *_emojiStaticImages;
     }
 }
 
-//创建表情按钮
+//创建表情按钮（多个页面的）
 - (void)creatPageViewOneBtns {
     
     int row = 1;
@@ -535,9 +544,9 @@ static NSDictionary *_emojiStaticImages;
     [self addSubview:pageView];
 }
 
+//pagecontrol
 - (void)creatPageControl {
     
-    //pagecontrol
     UIPageControl *pagecontrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.emotonViewPageOne.frame.size.height, screenW, 15)];
     
     pagecontrol.numberOfPages = 4;
@@ -557,14 +566,15 @@ static NSDictionary *_emojiStaticImages;
     [self addSubview:pagecontrol];
 }
 
+//点击表情时，插入图片到输入框
 - (void)insertEmoji:(UIButton *)btn {
-    
+    //创建自定义的附件
     LiuqsTextAttachment *emojiTextAttachment = [LiuqsTextAttachment new];
-    
+//    给附件设置tag值(用来对照图片；通过前边从plist中加载到的数组_emojiTags中取到按钮对应的字符串)
     emojiTextAttachment.emojiTag = _emojiTags[(NSUInteger) btn.tag - 1];
     
     NSString *imageName;
-    
+    //下边这个判断可以不管，是我在测试新加载方案的调试代码。下边方法就是要取到当前按钮对应的图片名字
     if (btn.tag > 60) {
         
         NSString *shortName = [_emojiStaticImages objectForKey:_emojiTags[(NSUInteger) btn.tag - 1]];
@@ -575,16 +585,16 @@ static NSDictionary *_emojiStaticImages;
         
         imageName = [_emojiStaticImages objectForKey:_emojiTags[(NSUInteger) btn.tag - 1]];
     }
+    //给附件设置图片
     emojiTextAttachment.image = [UIImage imageNamed:imageName];
-    
+//    给附件设置尺寸,会在自定义附件内部重写方法用这个值来设置附件尺寸
     emojiTextAttachment.emojiSize = CGSizeMake(_EMOJI_MAX_SIZE, _EMOJI_MAX_SIZE);
-    
+    //textview插入富文本，用创建的附件初始化富文本
     [_IputView.textStorage insertAttributedString:[NSAttributedString attributedStringWithAttachment:emojiTextAttachment] atIndex:_IputView.selectedRange.location];
-    
     _IputView.selectedRange = NSMakeRange(_IputView.selectedRange.location + 1, _IputView.selectedRange.length);
-    
+    //调用这个方法是为了响应代理方法，目的是触发输入框改变时候的事件，比如表情输入时候需要改变输入框的高度等，设计的比较多！
     [self emotionBtnDidClick:btn];
-    
+    //重设输入框
     [self resetTextStyle];
 }
 
@@ -601,7 +611,7 @@ static NSDictionary *_emojiStaticImages;
 
 
 
-//删除
+//删除按钮事件
 - (void)deleteBtnClick:(UIButton *)btn {
     
     [self emotionBtnDidClick:btn];
@@ -609,6 +619,7 @@ static NSDictionary *_emojiStaticImages;
     [self.IputView deleteBackward];
 }
 
+//scrollview代理事件，在这里处理pageControl;处理见键盘页面切换时候改变底部表情按钮的选中状态等
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     if (self.emojiBtn.selected) {
@@ -663,6 +674,7 @@ static NSDictionary *_emojiStaticImages;
     }
 }
 
+//gif表情的事件
 -(void)BtnClick:(UIButton *)btn {
     
     if ([self.delegate respondsToSelector:@selector(gifBtnClick:)]) {
@@ -672,6 +684,7 @@ static NSDictionary *_emojiStaticImages;
 }
 
 
+//底部不同表情按钮的事件，用来处理键盘页面的切换，和scrollViewDidScroll处理的事件是相互的！（点按钮切换页面，滑动页面改变按钮选中状态）
 - (void)emotionBtnsClick:(UIButton *)btn {
     
     self.emotionBtn.selected = NO;

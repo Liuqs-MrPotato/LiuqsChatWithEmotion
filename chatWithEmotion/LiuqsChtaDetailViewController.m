@@ -57,7 +57,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createExampleData];
+//    [self createExampleData];
     [self creatTableView];
     [self creatToolBar];
     [self setNoti];

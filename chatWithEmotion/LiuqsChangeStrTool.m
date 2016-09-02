@@ -38,17 +38,17 @@ static NSMutableAttributedString *_resultStr;
 
     _emojiImages = [NSDictionary dictionaryWithContentsOfFile:path];
     
-    //设置文本参数
+    //设置文本参数（行间距，文本颜色，字体大小）
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
-
+    
     [paragraphStyle setLineSpacing:4.0f];
     
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_textColor,NSForegroundColorAttributeName,_font,NSFontAttributeName,paragraphStyle,NSParagraphStyleAttributeName,nil];
     
     CGSize maxsize = CGSizeMake(1000, MAXFLOAT);
-    
+    //计算表情的大小
     _emotionSize = [@"/" boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
-    
+    //保存当前富文本
     _attStr = [[NSMutableAttributedString alloc]initWithString:_string attributes:dict];
     
 }
@@ -56,40 +56,40 @@ static NSMutableAttributedString *_resultStr;
 
 + (void)executeMatch {
     
-    //比对结果
+    //比对结果（正则验证的过程）
     NSString *regexString = checkStr;
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:nil];
     
     NSRange totalRange = NSMakeRange(0, [_string length]);
-    
+    //保存验证结果，结果是一个数组，存放的是NSTextCheckingResult类
     _matches = [regex matchesInString:_string options:0 range:totalRange];
 }
 
 + (void)setImageDataArray {
     
     NSMutableArray *imageDataArray = [NSMutableArray array];
-    //遍历结果
+    //遍历_matches
     for (int i = (int)_matches.count - 1; i >= 0; i --) {
         
         NSMutableDictionary *record = [NSMutableDictionary dictionary];
-        
+        //创建附件
         LiuqsTextAttachment *attachMent = [[LiuqsTextAttachment alloc]init];
-        
+//        设置尺寸
         attachMent.emojiSize = CGSizeMake(_emotionSize.height, _emotionSize.height);
-        
+//        取到当前的表情
         NSTextCheckingResult *match = [_matches objectAtIndex:i];
-        
+//        取出表情字符串在文本中的位置
         NSRange matchRange = [match range];
         
         NSString *tagString = [_string substringWithRange:matchRange];
-        
+//        拿出表情对应的图片名字
         NSString *imageName = [_emojiImages objectForKey:tagString];
-        
+//        判断是否有这个图，有就继续没有就跳出当次循环
         if (imageName == nil || imageName.length == 0) continue;
         //这里有个问题，需要先判断是否有图片，没有图片的话应该不操作，因为现在换用html处理，先不改！
         NSString *cheakStr = [imageName substringWithRange:NSMakeRange(1, 2)];
-       
+       // 不用管这个判断，操作就是要取出图片，给附件设置图片
         if ([cheakStr intValue] > 60) {
             
             NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"gif"];
@@ -105,6 +105,7 @@ static NSMutableAttributedString *_resultStr;
             attachMent.image = [UIImage imageNamed:imageName]; 
         }
         
+//        然后把表情富文本和对应的位置存到字典中，再把字典存到数组中，这样就得到一个字典数组。
         NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attachMent];
         
         [record setObject:[NSValue valueWithRange:matchRange] forKey:@"range"];
@@ -113,9 +114,11 @@ static NSMutableAttributedString *_resultStr;
         
         [imageDataArray addObject:record];
     }
+    //保存字典数组
     _imageDataArray = imageDataArray;
 }
 
+//遍历上一步的字典数组，执行替换并返回一个富文本
 + (void)setResultStrUseReplace{
     
     NSMutableAttributedString *result = _attStr;
