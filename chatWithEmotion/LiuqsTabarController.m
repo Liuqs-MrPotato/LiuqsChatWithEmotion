@@ -45,10 +45,9 @@
     [VC.tabBarItem setImage:[UIImage imageNamed:iamgeName]];
     
     [VC.tabBarItem setSelectedImage:selImage];
-    LiuqsNavigationController *nav = [[LiuqsNavigationController alloc]initWithRootViewController:VC];
     
     //添加到tablebarcontroller
-    [self addChildViewController:nav];
+    [self addChildViewController:VC];
     
     
     

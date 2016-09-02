@@ -1,7 +1,4 @@
-//
-//  LiuqsChangeStrTool.m
-//  表情键盘
-//
+
 //  Created by 刘全水 on 15/12/30.
 //  Copyright © 2015年 刘全水. All rights reserved.
 //
@@ -43,7 +40,7 @@ static NSMutableAttributedString *_resultStr;
     
     //设置文本参数
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
-    
+
     [paragraphStyle setLineSpacing:4.0f];
     
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_textColor,NSForegroundColorAttributeName,_font,NSFontAttributeName,paragraphStyle,NSParagraphStyleAttributeName,nil];
@@ -53,6 +50,7 @@ static NSMutableAttributedString *_resultStr;
     _emotionSize = [@"/" boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
     
     _attStr = [[NSMutableAttributedString alloc]initWithString:_string attributes:dict];
+    
 }
 
 
@@ -135,6 +133,8 @@ static NSMutableAttributedString *_resultStr;
     _resultStr = result;
 }
 
+
+#pragma mark - 以下是我用来优化性能方案的代码，暂时不用，只是一个思路现在还有一些问题，不能完美实现！（用网页加载gif，解决大量gif时列表滑动卡顿的问题，目前还无法完美的计算文本内容在网页中所占的尺寸）
 
 + (NSString *)changeTextToHtmlStrWithText:(NSString *)text {
 

@@ -559,8 +559,6 @@ static NSDictionary *_emojiStaticImages;
 
 - (void)insertEmoji:(UIButton *)btn {
     
-    [self emotionBtnDidClick:btn];
-    
     LiuqsTextAttachment *emojiTextAttachment = [LiuqsTextAttachment new];
     
     emojiTextAttachment.emojiTag = _emojiTags[(NSUInteger) btn.tag - 1];

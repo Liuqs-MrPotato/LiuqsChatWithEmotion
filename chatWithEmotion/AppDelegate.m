@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "LiuqsTabarController.h"
 #import "UIImage+Extension.h"
+#import "LiuqsNavigationController.h"
+#import "LiuqsTabarController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [UIViewController new];
-    self.window.rootViewController = [[LiuqsTabarController alloc]init];
+    self.window.rootViewController = [UINavigationController new];
+    LiuqsTabarController *tabbarVC = [[LiuqsTabarController alloc]init];
+    self.window.rootViewController = [[LiuqsNavigationController alloc]initWithRootViewController:tabbarVC];
     
     
 //    [[UINavigationBar appearance] setBackgroundImage:[UIImage createImageWithColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0]] forBarMetrics:UIBarMetricsDefault];

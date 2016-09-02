@@ -7,6 +7,7 @@
 //
 
 #import "LiuqsNavigationController.h"
+#import "LiuqsTabarController.h"
 
 @interface LiuqsNavigationController ()
 
@@ -16,13 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.navigationController.interactivePopGestureRecognizer.delegate =(id)self;
-   
 }
 
--(void)leftAction
-{
-    
-}
+
 
 @end

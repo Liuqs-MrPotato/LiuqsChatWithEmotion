@@ -57,11 +57,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createExampleData];
     [self creatTableView];
     [self creatToolBar];
     [self setNoti];
-    [self creatEmotionView];
     [self creatNavgationBar];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+    self.emotionview.IputView = self.toolBarView.textView;
+}
+
+- (void)createExampleData {
+    
+    LiuqsCellFrame   *cellFrame = [LiuqsCellFrame new];
+    LiuqsChatMessage *message = [LiuqsChatMessage new];
+    for (int i = 1; i < 3; i ++) {
+       
+        if (i % 2 == 0) {
+           
+            message.text = @"在村里，Lz辈分比较大，在我还是小屁孩的时候就有大人喊我叔了，这不算糗。 成年之后，鼓起勇气向村花二丫深情表白了(当然是没有血缘关系的)，结果她一脸淡定的回绝了:“二叔！别闹……";
+            message.type = @"message";
+        }else {
+        
+            message.text = @"小学六年级书法课后不知是哪个用红纸写了张六畜兴旺贴教室门上，上课语文老师看看门走了，过了一会才来，过了几天去办公室交作业听见语文老师说：看见那几个字我本来是不想进去的，但是后来一想养猪的也得进去喂猪";
+            message.type = @"message";
+        }
+         cellFrame.message = message;
+        
+        [self.dataSourceArray addObject:cellFrame];
+    }
+    
+    [_tableView reloadData];
 }
 
 -(void)creatTableView
@@ -120,14 +151,8 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
--(void)creatEmotionView
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.emotionview.IputView = self.toolBarView.textView;
-        });
-    });
-}
+
+
 -(void)setNoti
 {
     // 键盘frame将要改变就会接受到通知
@@ -181,6 +206,7 @@
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {
     self.toolBarView.toolBarEmotionBtn.selected = NO;
+    self.emotionview.frame = emotionUpFrame;
     [UIView animateWithDuration:emotionTipTime animations:^{
      self.tableView.height = screenH - self.keyBoardH - self.toolBarView.height - 64;
         if (self.tableView.contentSize.height > self.tableView.height) {
@@ -279,7 +305,6 @@
         
         //了解一下编码格式
         text = @"[吐舌]  彩笔，怎么可以输入空格呢？[抓狂]";
-//        text = @"[g抓狂][g抓狂]你好呀大逗逼哈哈哈哈哈哈哈哈啊哈哈[g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂][g抓狂]";
     }
     LiuqsCellFrame *model = [self creatNormalMessageWithText:text];
     [self.dataSourceArray addObject:model];
@@ -370,9 +395,6 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
-
-
-
 
 
 @end
